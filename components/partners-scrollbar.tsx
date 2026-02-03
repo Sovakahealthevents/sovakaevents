@@ -120,6 +120,13 @@ const partners = [
     subtitle: 'Heart Health Event',
     logo: '/partners/two.jpg',
   },
+  {
+    id: 3,
+    name: 'South Asian Heart Center',
+    subtitle: 'Consortium For South Asian Health',
+    logo: '/partners/two.jpg',
+  },
+  
 ]
 
 export default function PartnersScrollbar() {

@@ -12,18 +12,52 @@ export default function PastEventDetail() {
           <p className="text-sm text-white/80 mb-4 text-center">
             Proudly presented by
           </p>
+          <div className="flex justify-center mb-4">
+  <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/20 backdrop-blur text-white text-sm font-semibold border border-white/30">
+    ✅ Completed Event
+  </span>
+</div>
+
 
           <div className="flex justify-center gap-6 mb-6">
-            <div className="bg-white rounded-lg px-4 py-2">
-              <span className="text-sm font-semibold text-gray-800">
-                Sovaka Health
-              </span>
-            </div>
-            <div className="bg-white rounded-lg px-4 py-2">
-              <span className="text-sm font-semibold text-gray-800">
-                South Asian Heart Center
-              </span>
-            </div>
+            <div className="flex flex-col items-center gap-2">
+ <div className="flex gap-6">
+  {/* ITEM 1 */}
+  <div className="flex flex-col items-center gap-2">
+    <div className="bg-white rounded-2xl px-8 py-6 shadow-sm">
+      <img
+        src="/sovakalogo.png"
+        alt="Sovaka Health"
+        className="h-10 w-auto"
+      />
+    </div>
+    <span className="text-sm font-semibold text-white">
+      Sovaka Health
+    </span>
+  </div>
+
+  {/* ITEM 2 */}
+  <div className="flex flex-col items-center gap-2">
+    <div className="bg-white rounded-2xl px-8 py-6 shadow-sm">
+      <img
+        src="/partners/one.png"
+        alt="South Asian Heart Center"
+        className="h-10 w-auto"
+      />
+    </div>
+    <span className="text-sm font-semibold text-white text-center">
+      South Asian Heart Center
+    </span>
+  </div>
+</div>
+
+</div>
+
+
+
+            
+
+            
           </div>
 
           {/* Title */}
@@ -112,7 +146,7 @@ export default function PastEventDetail() {
           {/* Attendance */}
           <div>
             <h4 className="font-semibold text-gray-900 mb-4">
-              In-Person Attendance
+              Inperson Event In English
             </h4>
 
             <ul className="text-sm text-gray-700 space-y-3">
@@ -121,20 +155,12 @@ export default function PastEventDetail() {
                 <br />
                 2500 Grant Road, Mountain View 94040, California, USA
               </li>
-              <li>📅 September 28th, Sunday</li>
+              <li>📅 September 28th,2025</li>
               <li>⏰ 3:00 PM PST</li>
             </ul>
           </div>
 
-          {/* QR + CTA */}
-          <div className="flex items-center gap-6 bg-white rounded-xl p-4 border">
-            <div className="w-24 h-24 bg-gray-200 rounded-lg flex items-center justify-center text-xs text-gray-500">
-              QR Code
-            </div>
-            <p className="text-sm text-gray-600">
-              Scan or click to register
-            </p>
-          </div>
+         
 
           {/* Highlight */}
           <div className="bg-blue-100 text-blue-800 text-sm rounded-lg px-4 py-3">

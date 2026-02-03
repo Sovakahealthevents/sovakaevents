@@ -20,9 +20,9 @@ export default function EventsPage() {
             </p>
           </div>
 
-          <button className="flex items-center gap-2 border rounded-full px-4 py-2 text-sm hover:bg-gray-50">
+          {/* <button className="flex items-center gap-2 border rounded-full px-4 py-2 text-sm hover:bg-gray-50">
             View Calendar →
-          </button>
+          </button> */}
         </div>
 
         <UpcomingEventsGrid

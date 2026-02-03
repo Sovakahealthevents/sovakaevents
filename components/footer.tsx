@@ -1,5 +1,7 @@
 'use client'
 
+import { CookieConsent } from "./cookie-consent"
+
 export default function Footer() {
   return (
     <footer className="bg-teal-700 text-white">
@@ -24,10 +26,19 @@ export default function Footer() {
         <div>
           <h4 className="font-semibold mb-4 text-white">Quick Links</h4>
           <ul className="space-y-3 text-teal-100">
-            <li className="hover:underline cursor-pointer">Home</li>
-            <li className="hover:underline cursor-pointer">Events</li>
-            <li className="hover:underline cursor-pointer">Library</li>
-            <li className="hover:underline cursor-pointer">Partners</li>
+            <li>
+  <a href="/" className="hover:underline cursor-pointer">Home</a>
+</li>
+<li>
+  <a href="/upcomingevents" className="hover:underline cursor-pointer">Upcoming Events</a>
+</li>
+<li>
+  <a href="/library" className="hover:underline cursor-pointer">Library</a>
+</li>
+<li>
+  <a href="/feedback" className="hover:underline cursor-pointer">MVP Feedback</a>
+</li>
+
           </ul>
         </div>
 
@@ -71,9 +82,15 @@ export default function Footer() {
         <p>© Sovaka Health™. All rights reserved.</p>
 
         <div className="flex gap-6">
-          <span className="hover:underline cursor-pointer">
+         
+           <a
+            href="/cookie-preferences"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline cursor-pointer"
+          >
             Cookie Preferences
-          </span>
+          </a>
 
           <a
             href="/files/SovakaHealthPrivacyPolicy2.1.26.pdf"
@@ -94,6 +111,7 @@ export default function Footer() {
           </a>
         </div>
       </div>
+      <CookieConsent />
     </footer>
   )
 }

@@ -50,22 +50,55 @@ const EVENTS = [
     id: 1,
     title: 'Understanding and Preventing Osteoporosis',
     category: 'Bone Health',
-    speaker: 'David Brian Karpf, MD',
-    speakerTitle:
-      'Adj. Clinical Professor of Endocrinology, Gerontology & Metabolism',
-    speakerOrg: 'Stanford University School of Medicine',
-    speakerImage: '/david.png',
+
+    tags: ['Virtual', 'FREE'],
+
+    speaker: {
+      name: 'David Brian Karpf, MD',
+      title:
+        'Adj. Clinical Professor of Endocrinology, Gerontology & Metabolism',
+      org: 'Stanford University School of Medicine',
+      image: '/david.png',
+    },
+
+    highlights: [
+      'Attending, Osteoporosis & Metabolic Bone Disease Clinic, Stanford University Hospital',
+      'Past-Chair, MSAB, American Bone Health | Fellow, ASBMR',
+      'I am Scientific Advisor at Bone Health Technologies (Osteoboost).',
+    ],
+
+    meta: {
+      mode: 'Virtual Zoom, Worldwide',
+      date: 'Date TBA',
+      duration: '1hr Session + Q&A',
+    },
   },
+
   {
     id: 2,
     title: 'Halt Heart Attacks! Stop Diabetes!',
     category: 'Heart Health',
-    speaker: 'Cesar Molina, M.D., FACC',
-    speakerTitle:
-      'Cardiologist & Internal Medicine Specialist',
-    speakerOrg:
-      'Co-founder & Medical Director, South Asian Heart Center',
-      speakerImage: '/molina.jpg',
+
+    tags: ['Virtual', 'FREE'],
+
+    speaker: {
+      name: 'Cesar Molina, M.D., FACC',
+      title: 'Cardiologist & Internal Medicine Specialist',
+      org: 'Co-founder & Medical Director, South Asian Heart Center',
+      image: '/molina.jpg',
+    },
+
+    highlights: [
+      'M.D. Yale University | Cardiology Fellowship, Stanford University',
+      'Clinical Professor, Stanford University',
+      'Advisory Board, Prevention Committee, American Heart Association',
+    ],
+
+    meta: {
+      mode: 'Virtual Zoom, Worldwide',
+      date: 'Date TBA',
+      duration: '1hr Session + Q&A',
+    },
   },
 ]
 

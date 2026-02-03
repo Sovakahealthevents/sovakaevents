@@ -20,9 +20,9 @@ export default function FeaturedEvent() {
           </h2>
         </div>
 
-        <button className="text-teal-600 font-medium text-sm hover:underline flex items-center gap-1">
+        {/* <button className="text-teal-600 font-medium text-sm hover:underline flex items-center gap-1">
           View All Events →
-        </button>
+        </button> */}
       </div>
 
       {/* Card */}
@@ -62,6 +62,10 @@ export default function FeaturedEvent() {
             <span className="px-3 py-1 rounded-full border text-xs font-medium text-gray-600">
               Cancer Awareness
             </span>
+            <span className="px-3 py-1 rounded-full bg-orange-100 text-orange text-xs font-semibold">
+              🇮🇳 In Hindi
+            </span>
+            
           </div>
 
           {/* Title */}

@@ -159,7 +159,7 @@ export function EventSidebar({ event }: { event: Event }) {
 
   const eventUrl =
     typeof window !== 'undefined'
-      ? window.location.href
+      ? `${window.location.origin}/event-details/${event.id}`
       : ''
 
   /* ---------- Actions ---------- */
