@@ -22,7 +22,7 @@ export default function AboutSection({ event }: { event: Event }) {
       </div>
 
       {/* Key Highlights Section */}
-      {highlightedSpeaker && (
+      {/* {highlightedSpeaker && (
         <div
           className="
             relative rounded-xl
@@ -54,7 +54,7 @@ export default function AboutSection({ event }: { event: Event }) {
             )}
           </ul>
         </div>
-      )}
+      )} */}
 
       {/* Why Attend */}
       <div>

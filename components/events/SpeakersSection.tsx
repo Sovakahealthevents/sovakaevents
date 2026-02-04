@@ -80,13 +80,13 @@ export function SpeakersSection({ event }: { event: Event }) {
               </div>
 
               {/* Highlights */}
-              {speaker.highlights && (
+              {/* {speaker.highlights && (
                 <ul className="list-disc pl-5 mt-4 text-sm text-gray-700 space-y-1">
                   {speaker.highlights.map((point, idx) => (
                     <li key={idx}>{point}</li>
                   ))}
                 </ul>
-              )}
+              )} */}
 
               {/* Website */}
               {speaker.website && (

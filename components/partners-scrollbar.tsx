@@ -121,10 +121,16 @@ const partners = [
   },
   {
     id: 3,
-    name: 'South Asian Heart Center El Camino Hospital USA',
+    name: 'South Asian Heart Center, El Camino Hospital USA',
     subtitle: 'Consortium For South Asian Health',
     logo: '/partners/two.jpg',
   },
+  // {
+  //   id: 4,
+  //   name: 'El Camino Hospital USA',
+  //   subtitle: 'El Camino Hospital USA',
+  //   logo: '/partners/two.jpg',
+  // },
 ]
 
 export default function PartnersScrollbar() {

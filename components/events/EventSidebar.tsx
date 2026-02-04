@@ -150,6 +150,7 @@ import {
   MessageCircle,
   Mail,
   Link2,
+  Video,
 } from 'lucide-react'
 import { Event } from '@/lib/events'
 import { RegisterModal } from './RegisterModal'
@@ -228,9 +229,10 @@ END:VCALENDAR
           {/* Details */}
           <div className="space-y-3 text-sm text-gray-700">
             <div className="flex gap-2 items-start">
-              <MapPin className="h-4 w-4 text-teal-600 mt-0.5" />
+              <Video className="h-4 w-4 text-teal-600 mt-0.5" />
               <div>
-                <p>{event.location}</p>
+               <p className="font-semibold text-gray-800">{event.location}</p>
+
                 {event.locationType && (
                   <p className="text-xs text-gray-500">
                     {event.locationType}
@@ -268,13 +270,13 @@ END:VCALENDAR
           </button>
 
           {/* Calendar */}
-          <button
+          {/* <button
             onClick={downloadICS}
             className="w-full flex items-center justify-center gap-2 py-3 rounded-full border text-sm font-medium hover:bg-gray-50"
           >
             <CalendarPlus className="h-4 w-4" />
             Add to Calendar
-          </button>
+          </button> */}
 
           {/* Share */}
           <div className="space-y-4 pt-4 border-t">
@@ -316,9 +318,9 @@ END:VCALENDAR
               Proudly supported by
             </p>
 
-            <div className="rounded-xl bg-orange-50 px-4 py-3 text-center text-sm font-semibold text-orange-700">
+            {/* <div className="rounded-xl bg-orange-50 px-4 py-3 text-center text-sm font-semibold text-orange-700">
               SHREE SAIBABA SANSTHAN TRUST, SHIRDI
-            </div>
+            </div> */}
 
             <div className="rounded-xl bg-teal-50 px-4 py-3 text-center text-sm font-semibold text-teal-700">
               KIMS-USHALAKSHMI Centre for Breast Diseases

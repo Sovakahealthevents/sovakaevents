@@ -99,7 +99,7 @@ export function CookieConsent() {
     <div
       className="
         fixed bottom-4 left-4 z-50 w-[320px]
-        rounded-xl bg-yellow-400 p-4 shadow-xl
+        rounded-xl bg-green-400 p-4 shadow-xl
         animate-in slide-in-from-bottom duration-500
       "
     >
@@ -118,7 +118,7 @@ export function CookieConsent() {
         </Link>{" "}
         and{" "}
         <Link
-          href="/terms"
+          href="/files/SovakaHealthTermsofUse2.1.26.pdf"
           className="underline font-medium hover:text-gray-800"
         >
           Terms

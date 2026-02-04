@@ -38,8 +38,8 @@ export const events: Event[] = [
     dayName: 'Monday',
     month: 'March',
     time: '10:00 AM IST',
-    location: 'Worldwide',
-    locationType: 'Virtual',
+    location: 'Virtual Zoom',
+    locationType: 'Worldwide',
     featured: true,
     free: true,
 

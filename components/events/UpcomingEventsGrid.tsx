@@ -90,8 +90,8 @@ const EVENTS = [
 
     highlights: [
       'M.D. Yale University | Cardiology Fellowship, Stanford University',
-      'Clinical Professor, Stanford University',
-      'Advisory Board, Prevention Committee, American Heart Association',
+      'Expert in Cardiovascular Medicine',
+      'Specialized in South Asian heart health and preventing cardiology',
     ],
 
     meta: {
