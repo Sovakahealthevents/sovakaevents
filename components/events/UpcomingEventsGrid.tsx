@@ -64,7 +64,7 @@ const EVENTS = [
     highlights: [
       'Attending, Osteoporosis & Metabolic Bone Disease Clinic, Stanford University Hospital',
       'Past-Chair, MSAB, American Bone Health | Fellow, ASBMR',
-      'I am Scientific Advisor at Bone Health Technologies (Osteoboost).',
+      'Scientific Advisor at Bone Health Technologies (Osteoboost).',
     ],
 
     meta: {

@@ -101,7 +101,6 @@
 //   )
 // }
 
-
 'use client'
 
 import { useEffect, useRef } from 'react'
@@ -122,11 +121,10 @@ const partners = [
   },
   {
     id: 3,
-    name: 'South Asian Heart Center',
+    name: 'South Asian Heart Center El Camino Hospital USA',
     subtitle: 'Consortium For South Asian Health',
     logo: '/partners/two.jpg',
   },
-  
 ]
 
 export default function PartnersScrollbar() {
@@ -139,12 +137,10 @@ export default function PartnersScrollbar() {
     let scrollPos = 0
     const scroll = () => {
       scrollPos += 1
-      if (container.scrollHeight > container.clientHeight) {
-        if (scrollPos >= container.scrollHeight - container.clientHeight) {
-          scrollPos = 0
-        }
-        container.scrollTop = scrollPos
+      if (scrollPos >= container.scrollHeight - container.clientHeight) {
+        scrollPos = 0
       }
+      container.scrollTop = scrollPos
     }
 
     const interval = setInterval(scroll, 40)
@@ -152,30 +148,37 @@ export default function PartnersScrollbar() {
   }, [])
 
   return (
-    <div className="h-[620px] flex flex-col sticky top-0 bg-white">
+    <div className="h-[620px] sticky top-0 bg-white border border-gray-200 rounded-lg overflow-hidden">
       {/* Header */}
-      <div className="p-4 border-b border-gray-200 text-center">
-        <h3 className="font-bold text-sm text-gray-800">Supported By</h3>
+      <div className="p-4 border-b text-center">
+        <h3 className="font-bold text-sm text-gray-800">
+          Supported By
+        </h3>
       </div>
 
-      {/* Scrollable Sponsors */}
+      {/* Scrollable content */}
       <div
         ref={scrollContainer}
-        className="flex-1 overflow-y-auto p-4 space-y-6"
+        className="flex-1 overflow-y-auto p-4 space-y-8"
       >
-        <div className="w-20 h-20 flex items-center justify-center">
-              <Image
-                src="/saibaba.jpeg"
-                alt="sovaka"
-                width={100}
-                height={120}
-                className="object-contain"
-              />
-            </div>
+        {/* Top Highlight Logo */}
+        <div className="flex justify-center pb-4 border-b">
+          <div className="w-24 h-24 mt-4 flex items-center justify-center">
+            <Image
+              src="/saibaba.jpeg"
+              alt="Sovaka Partner"
+              width={120}
+              height={120}
+              className="object-contain"
+            />
+          </div>
+        </div>
+
+        {/* Partners */}
         {partners.map((partner) => (
           <div
             key={partner.id}
-            className="flex flex-col items-center text-center gap-3 pb-6 border-b border-gray-200 last:border-b-0"
+            className="flex flex-col items-center text-center gap-4 pb-6 border-b last:border-b-0"
           >
             {/* Logo */}
             {/* <div className="w-20 h-20 flex items-center justify-center">
@@ -189,11 +192,12 @@ export default function PartnersScrollbar() {
             </div> */}
 
             {/* Text */}
-            <div className="space-y-1">
+            <div className="max-w-[200px] space-y-1">
               <p className="text-xs font-semibold text-gray-800 leading-snug">
                 {partner.name}
               </p>
-              {/* <p className="text-xs text-gray-600 leading-snug">
+
+              {/* <p className="text-[11px] text-gray-600 leading-snug">
                 {partner.subtitle}
               </p> */}
             </div>
