@@ -84,7 +84,7 @@ const EVENTS = [
     speaker: {
       name: 'Cesar Molina, M.D., FACC',
       title: 'Cardiologist & Internal Medicine Specialist',
-      org: 'Co-founder & Medical Director, South Asian Heart Center',
+      org: 'Co-founder & Medical Director of South Asian heart center at el camino hospital',
       image: '/molina.jpg',
     },
 

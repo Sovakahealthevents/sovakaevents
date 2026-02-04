@@ -182,7 +182,7 @@ export default function HeroSection() {
             </div>
 
             {/* Buttons */}
-            <div className="flex flex-wrap gap-4 mt-10">
+            {/* <div className="flex flex-wrap gap-4 mt-10">
               <button className="rounded-full bg-teal-600 px-6 py-3 text-sm sm:text-base text-white font-medium hover:bg-teal-700 transition">
                 ▶ Browse Events
               </button>
@@ -190,7 +190,7 @@ export default function HeroSection() {
               <button className="rounded-full border border-gray-300 px-6 py-3 text-sm sm:text-base text-gray-700 font-medium hover:bg-gray-100 transition">
                 Become a Partner
               </button>
-            </div>
+            </div> */}
           </div>
         </motion.div>
 

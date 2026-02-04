@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function PastEventDetail() {
   return (
@@ -132,12 +133,23 @@ export default function PastEventDetail() {
           </ul>
 
           <div className="mt-6 flex gap-6 text-sm font-medium text-red-700">
-            <span className="hover:underline cursor-pointer">
-              Learn more about Dr. Molina
-            </span>
-            <span className="hover:underline cursor-pointer">
-              Read Patient Testimonials
-            </span>
+           <Link
+  href="https://www.cesarrmolinamd.com/about"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="hover:underline cursor-pointer"
+>
+  Learn more about Dr. Molina
+</Link>
+
+<Link
+  href="https://www.cesarrmolinamd.com/testimonials"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="hover:underline cursor-pointer"
+>
+  Read Patient Testimonials
+</Link>
           </div>
         </div>
 
