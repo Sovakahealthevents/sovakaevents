@@ -201,22 +201,22 @@ export default function OurPartners() {
       </div>
 
       {/* INFO STRIP */}
-      <div className="max-w-6xl mx-auto mb-10">
+      {/* <div className="max-w-6xl mx-auto mb-10">
         <div className="rounded-xl border border-blue-200 bg-blue-50 px-6 py-4 text-center text-gray-700 italic">
           The South Asian Heart Center was founded in 2006 at El Camino Health to
           reduce the high incidence of diabetes and heart disease in South Asians
           with culturally tailored, evidence-based, and lifestyle-focused services.
         </div>
-      </div>
+      </div> */}
 
       {/* PARTNERSHIP ANNOUNCEMENT */}
-      <div className="max-w-6xl mx-auto mb-14">
+      {/* <div className="max-w-6xl mx-auto mb-14">
         <div className="relative rounded-2xl bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-100 px-6 py-6 pl-16 shadow-sm">
           
-          {/* Left Accent */}
+          
           <div className="absolute left-0 top-0 h-full w-2 bg-blue-700 rounded-l-2xl" />
 
-          {/* Icon */}
+         
           <div className="absolute left-5 top-6 flex h-8 w-8 items-center justify-center rounded-full bg-blue-100">
             <Handshake className="h-4 w-4 text-blue-700" />
           </div>
@@ -234,7 +234,7 @@ export default function OurPartners() {
             futures—one conversation at a time.
           </p>
         </div>
-      </div>
+      </div> */}
 
     
     </section>
