@@ -151,7 +151,7 @@ const partners = [
   //   size: 'normal',
   // },
   {
-    logo: '/partners/two.jpg', // KIMS
+    logo: '/partners/five.jpeg', // KIMS
     url: 'https://www.kimshospitals.com',
     size: 'large',
   },
