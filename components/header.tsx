@@ -167,7 +167,7 @@ export default function Header() {
             MVP Feedback
           </Link>
 
-          <button
+          {/* <button
             onClick={() => setShowEmail(!showEmail)}
             className="block font-medium text-gray-800"
           >
@@ -179,7 +179,7 @@ export default function Header() {
             className="block font-medium text-gray-800"
           >
             Donate
-          </button>
+          </button> */}
         </div>
       )}
     </header>

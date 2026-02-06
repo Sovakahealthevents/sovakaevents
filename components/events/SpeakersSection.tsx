@@ -115,9 +115,9 @@ export function SpeakersSection({ event }: { event: Event }) {
   return (
     <section>
       {/* Section Title */}
-      <h2 className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-8">
+      {/* <h2 className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-8">
         Meet Your Speakers
-      </h2>
+      </h2> */}
 
       <div className="space-y-10">
         {event.speakers.map((speaker) => {
