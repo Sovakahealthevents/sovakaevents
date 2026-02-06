@@ -47,13 +47,13 @@ export default function Footer() {
           <h4 className="font-semibold mb-4 text-white">Contact</h4>
 
           <div className="space-y-4 text-teal-100">
-            <div>
+            {/* <div>
               <p className="text-sm font-medium text-teal-200">Sales</p>
               <p>supportmvp@sovakahealth.onmicrosoft.com</p>
-            </div>
+            </div> */}
 
             <div>
-              <p className="text-sm font-medium text-teal-200">Support</p>
+              {/* <p className="text-sm font-medium text-teal-200">Support</p> */}
               <p>sovakahealthevents@sovakahealth.onmicrosoft.com</p>
             </div>
           </div>

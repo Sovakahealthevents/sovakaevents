@@ -40,11 +40,19 @@ export default function PastEventDetail() {
   {/* ITEM 2 */}
   <div className="flex flex-col items-center gap-2">
     <div className="bg-white rounded-2xl px-8 py-6 shadow-sm">
-      <img
-        src="/partners/one.png"
-        alt="South Asian Heart Center"
-        className="h-10 w-auto"
-      />
+      <a
+  href="https://www.southasianheartcenter.org"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center p-2 rounded-lg hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-teal-500"
+>
+  <img
+    src="/partners/one.png"
+    alt="South Asian Heart Center"
+    className="h-10 w-auto"
+  />
+</a>
+
     </div>
     <span className="text-sm font-semibold text-white text-center">
       South Asian Heart Center

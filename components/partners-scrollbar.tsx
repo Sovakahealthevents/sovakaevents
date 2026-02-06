@@ -115,16 +115,16 @@ const partners = [
   },
   {
     id: 2,
-    name: 'KIMS USHALAKSHMI Centre for Breast Disease, India',
+    name: 'KIMS USHALAKSHMI Centre for Breast Diseases, India',
     subtitle: 'Heart Health Event',
     logo: '/partners/two.jpg',
   },
-  {
-    id: 3,
-    name: 'South Asian Heart Center, El Camino Hospital USA',
-    subtitle: 'Consortium For South Asian Health',
-    logo: '/partners/two.jpg',
-  },
+  // {
+  //   id: 3,
+  //   name: 'South Asian Heart Center, El Camino Hospital USA',
+  //   subtitle: 'Consortium For South Asian Health',
+  //   logo: '/partners/two.jpg',
+  // },
   // {
   //   id: 4,
   //   name: 'El Camino Hospital USA',

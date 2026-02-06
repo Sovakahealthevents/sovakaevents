@@ -318,12 +318,13 @@ END:VCALENDAR
               Proudly supported by
             </p>
 
-            {/* <div className="rounded-xl bg-orange-50 px-4 py-3 text-center text-sm font-semibold text-orange-700">
-              SHREE SAIBABA SANSTHAN TRUST, SHIRDI
-            </div> */}
+            <div className="rounded-xl bg-orange-50 px-4 py-3 text-center text-sm font-semibold text-orange-700">
+              KIMS-USHALAKSHMI Centre for Breast Diseases, Hyderabad, India
+            </div>
 
             <div className="rounded-xl bg-teal-50 px-4 py-3 text-center text-sm font-semibold text-teal-700">
-              KIMS-USHALAKSHMI Centre for Breast Diseases
+              
+              Ushalakshmi Breast Cancer Foundation, Hyderabad, India 
             </div>
           </div>
         </div>

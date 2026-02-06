@@ -33,7 +33,7 @@ export const events: Event[] = [
   {
     id: 1,
     type: 'Virtual Zoom, Worldwide',
-    title: 'Cancer Awareness Camp: Elderly & Breast Cancer',
+    title: 'Cancer care in elderly',
     date: '02',
     dayName: 'Monday',
     month: 'March',
@@ -54,7 +54,7 @@ export const events: Event[] = [
         title: 'MD – Surgical Oncology Specialist',
         bio:
           'Board-certified Surgical Oncologist at Roger Williams Medical Center, Providence. 36+ years of experience in geriatric oncology.',
-        topic: 'Cancer in Elderly',
+        topic: 'Cancer care in elderly ',
         topicDescription:
           "55–60% of India's cancer burden now in adults over 60. Covering frailty, multimorbidity, financial toxicity, and the urgent need for geriatric oncology policies.",
         highlights: [
@@ -71,11 +71,11 @@ export const events: Event[] = [
         role: 'FEATURED SPEAKER',
         name: 'Dr. P. Raghu Ram OBE',
         title:
-          'Padma Shri & Dr. B.C. Roy National Awardee • OBE',
+          'Padma Shri Awardee • Consultant Surgeon: KIMS-USHALAKSHMI Centre for Breast Diseases',
         bio:
           'Founding Director, KIMS-USHALAKSHMI Centre for Breast Diseases. Founder & Chairman, Ushalakshmi Breast Cancer Foundation.',
         topic:
-          'ABCs of Breast Cancer – What Everyone Must Know!',
+          'ABCs of Breast Cancer',
         topicDescription:
           'Essential knowledge about breast cancer awareness, early detection, and modern treatment approaches.',
         website: 'https://breastcancerindia.org',

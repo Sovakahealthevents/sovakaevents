@@ -25,7 +25,6 @@
 //     </div>
 //   )
 // }
-
 import {
   CalendarDays,
   Clock,
@@ -38,20 +37,20 @@ import {
 export function EventHeader({ event }: { event: any }) {
   return (
     <section className="relative overflow-hidden">
-      <div className="rounded-3xl bg-gradient-to-br from-teal-50 via-white to-orange-50 px-6 sm:px-10 py-10 sm:py-14 mb-10">
+      <div className="rounded-3xl bg-gradient-to-br from-teal-50 via-white to-orange-50 px-6 sm:px-10 py-12 sm:py-16 mb-12">
 
         {/* Top badges */}
-        <div className="flex flex-wrap items-center gap-3 mb-6">
+        <div className="flex flex-wrap items-center gap-4 mb-8">
           {event.featured && (
             <Badge
-              icon={<Star className="w-4 h-4" />}
+              icon={<Star className="w-5 h-5" />}
               text="Featured"
               className="bg-orange-100 text-orange-700"
             />
           )}
 
           <Badge
-            icon={<Video className="w-4 h-4" />}
+            icon={<Video className="w-5 h-5" />}
             text="Virtual Zoom"
             className="bg-teal-100 text-teal-700"
           />
@@ -64,29 +63,29 @@ export function EventHeader({ event }: { event: any }) {
           )}
 
           <Badge
-            icon={<Globe className="w-4 h-4" />}
+            icon={<Globe className="w-5 h-5" />}
             text="Worldwide"
             className="bg-gray-100 text-gray-700"
           />
         </div>
 
         {/* Title */}
-        <h1 className="text-3xl font-bold text-gray-900 mb-4">
-         {event.title}
-       </h1>
+        <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 leading-tight mb-6">
+          {event.title}
+        </h1>
 
         {/* Meta info */}
-        <div className="mt-8 flex flex-wrap items-center gap-4">
+        <div className="mt-10 flex flex-wrap items-center gap-5">
           <MetaBig
-            icon={<CalendarDays className="w-5 h-5" />}
+            icon={<CalendarDays className="w-6 h-6" />}
             text={`${event.month} ${event.date}, ${event.dayName}`}
           />
           <MetaBig
-            icon={<Clock className="w-5 h-5" />}
+            icon={<Clock className="w-6 h-6" />}
             text={event.time}
           />
           <MetaBig
-            icon={<Users className="w-5 h-5" />}
+            icon={<Users className="w-6 h-6" />}
             text={`${event.speakers?.length || 0} Expert Speakers`}
           />
         </div>
@@ -108,7 +107,7 @@ function Badge({
 }) {
   return (
     <span
-      className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-semibold ${className}`}
+      className={`inline-flex items-center gap-2 px-5 py-2 rounded-full text-base font-semibold ${className}`}
     >
       {icon}
       {text}
@@ -124,7 +123,7 @@ function MetaBig({
   text: string
 }) {
   return (
-    <div className="flex items-center gap-3 rounded-xl bg-white px-5 py-3 text-base font-medium text-gray-800 shadow-sm">
+    <div className="flex items-center gap-4 rounded-2xl bg-white px-6 py-4 text-lg font-medium text-gray-800 shadow-sm">
       <span className="text-teal-600">{icon}</span>
       {text}
     </div>
