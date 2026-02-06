@@ -145,11 +145,11 @@ import Link from 'next/link'
 import { Handshake } from 'lucide-react'
 
 const partners = [
-  {
-    logo: '/partners/one.png',
-    url: 'https://www.southasianheartcenter.org',
-    size: 'normal',
-  },
+  // {
+  //   logo: '/partners/one.png',
+  //   url: 'https://www.southasianheartcenter.org',
+  //   size: 'normal',
+  // },
   {
     logo: '/partners/two.jpg', // KIMS
     url: 'https://www.kimshospitals.com',
@@ -201,13 +201,13 @@ export default function OurPartners() {
       </div>
 
       {/* INFO STRIP */}
-      <div className="max-w-6xl mx-auto mb-10">
+      {/* <div className="max-w-6xl mx-auto mb-10">
         <div className="rounded-xl border border-blue-200 bg-blue-50 px-6 py-4 text-center text-gray-700 italic">
           The South Asian Heart Center was founded in 2006 at El Camino Health to
           reduce the high incidence of diabetes and heart disease in South Asians
           with culturally tailored, evidence-based, and lifestyle-focused services.
         </div>
-      </div>
+      </div> */}
 
       {/* PARTNERSHIP ANNOUNCEMENT */}
       {/* <div className="max-w-6xl mx-auto mb-14">
