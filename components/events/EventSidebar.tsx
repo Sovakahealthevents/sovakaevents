@@ -322,10 +322,10 @@ END:VCALENDAR
               KIMS-USHALAKSHMI Centre for Breast Diseases, Hyderabad, India
             </div>
 
-            <div className="rounded-xl bg-teal-50 px-4 py-3 text-center text-sm font-semibold text-teal-700">
+            {/* <div className="rounded-xl bg-teal-50 px-4 py-3 text-center text-sm font-semibold text-teal-700">
               
               Ushalakshmi Breast Cancer Foundation, Hyderabad, India 
-            </div>
+            </div> */}
           </div>
         </div>
       </aside>
