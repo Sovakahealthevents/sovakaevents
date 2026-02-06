@@ -976,7 +976,7 @@ export default function FeaturedEvent() {
       <div className="flex items-center gap-3 rounded-xl border border-yellow-300 bg-yellow-50 px-5 py-4 text-base text-yellow-900">
         <AlertTriangle className="w-6 h-6 text-yellow-600" />
         <p>
-          <span className="font-semibold">Disclaimer:</span> Educational session only.
+          <span className="font-semibold">Disclaimer:</span> Educational only. Not medical advice. Always  consult your physician.
         </p>
       </div>
 
