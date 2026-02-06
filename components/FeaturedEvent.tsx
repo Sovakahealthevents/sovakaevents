@@ -818,8 +818,6 @@
 //   )
 // }
 
-
-
 'use client'
 
 import Image from 'next/image'
@@ -839,7 +837,7 @@ export default function FeaturedEvent() {
     <section className="px-6 lg:px-16 py-16 bg-white text-lg leading-relaxed">
       {/* Header */}
       <div className="mb-10">
-        <p className="text-orange-500 font-medium text-base mb-2">
+        <p className="flex items-center gap-2 text-orange-500 font-medium text-base mb-2">
           ⭐ Featured Event
         </p>
         <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
@@ -849,8 +847,9 @@ export default function FeaturedEvent() {
 
       {/* Event Card */}
       <div className="flex flex-col lg:flex-row rounded-2xl border border-gray-200 overflow-hidden shadow-sm mb-10">
+        
         {/* Image */}
-        <div className="relative w-full lg:w-[40%] h-[280px] bg-teal-100">
+        <div className="relative w-full lg:w-[40%] h-[280px] lg:h-auto">
           <div className="absolute top-4 left-4 bg-white rounded-xl px-5 py-4 text-center shadow z-10">
             <p className="text-base font-semibold text-teal-600">MAR</p>
             <p className="text-4xl font-bold text-teal-700">02</p>
@@ -859,7 +858,7 @@ export default function FeaturedEvent() {
 
           <Image
             src="/cancer-awareness.jpg"
-            alt="Cancer Awareness"
+            alt="Cancer Awareness Camp"
             fill
             className="object-cover"
             priority
@@ -876,14 +875,17 @@ export default function FeaturedEvent() {
             <span className="px-4 py-1.5 rounded-full bg-green-500 text-white text-sm font-semibold">
               FREE
             </span>
-            <span className="px-4 py-1.5 rounded-full border text-sm text-gray-700">
+            <span className="px-4 py-1.5 rounded-full border text-sm font-medium text-gray-700">
               Cancer Awareness
+            </span>
+            <span className="px-4 py-1.5 rounded-full bg-orange-100 text-orange-700 text-sm font-semibold">
+              🇮🇳 In Hindi
             </span>
           </div>
 
           {/* Title */}
           <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-            Cancer care in elderly
+            Cancer Care in Elderly
           </h3>
 
           {/* Points */}
@@ -892,18 +894,64 @@ export default function FeaturedEvent() {
               Cancer burden among adults over 60 years in the Indian population
             </li>
             <li>
-              Frailty, multimorbidity, and financial toxicity and how they affect
+              Frailty, multimorbidity, and financial toxicity: how they affect
               treatment and recovery
             </li>
           </ul>
 
+          {/* Speakers — NOT REMOVED */}
+          <div className="mt-10 space-y-5">
+            <div className="flex items-start gap-4 p-5 rounded-xl bg-teal-50 border border-teal-100">
+              <Image
+                src="/somasundar.png"
+                alt=""
+                width={56}
+                height={56}
+                className="rounded-full"
+              />
+              <div>
+                <p className="font-semibold text-gray-900 text-lg">
+                  Dr. Ponnandai Somasundar
+                </p>
+                <p className="text-base text-teal-700 font-medium">
+                  MD – Surgical Oncologist | Roger Williams Medical Center
+                </p>
+                <p className="text-sm text-gray-700 mt-1">
+                  Topic: Cancer in Elderly
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4 p-5 rounded-xl bg-teal-50 border border-teal-100">
+              <Image
+                src="/raghu.png"
+                alt=""
+                width={56}
+                height={56}
+                className="rounded-full"
+              />
+              <div>
+                <p className="font-semibold text-gray-900 text-lg">
+                  Dr. P. Raghu Ram OBE
+                </p>
+                <p className="text-base text-orange-600 font-medium">
+                  Padma Shri Awardee • Consultant Surgeon: KIMS-USHALAKSHMI Centre for Breast Diseases
+                </p>
+                <p className="text-sm text-gray-700 mt-1">
+                  Topic: ABCs of Breast Cancer
+                </p>
+              </div>
+            </div>
+          </div>
+
           {/* Meta */}
           <div className="flex flex-wrap gap-4 mt-8 mb-8">
-            <div className="flex items-center gap-3 px-5 py-3 rounded-full bg-teal-600 text-white">
+            <div className="flex items-center gap-3 px-5 py-3 rounded-full bg-teal-600 text-white text-base font-medium">
               <Video className="w-5 h-5" />
               Virtual Zoom, Worldwide
             </div>
-            <div className="flex items-center gap-3 px-5 py-3 rounded-full bg-teal-600 text-white">
+
+            <div className="flex items-center gap-3 px-5 py-3 rounded-full bg-teal-600 text-white text-base font-medium">
               <Calendar className="w-5 h-5" />
               Mar 02, 2026
               <Clock className="w-5 h-5 ml-2" />
@@ -915,36 +963,26 @@ export default function FeaturedEvent() {
           <div className="flex flex-wrap gap-4">
             <Link
               href={`/event-details/${eventId}`}
-              className="rounded-full bg-teal-600 px-10 py-4 text-lg text-white font-semibold hover:bg-teal-700"
+              className="rounded-full bg-teal-600 px-10 py-4 text-lg text-white font-semibold hover:bg-teal-700 transition"
             >
               Register Now →
             </Link>
-
-            {/* <button
-              onClick={() => {
-                setNotifyTitle('Notify me when sessions are available')
-                setNotifyOpen(true)
-              }}
-              className="rounded-full border border-teal-600 px-10 py-4 text-lg text-teal-600 font-semibold hover:bg-teal-50"
-            >
-              Get Updates in My Language
-            </button> */}
           </div>
         </div>
       </div>
 
       {/* Disclaimer */}
-      <div className="flex items-start gap-3 rounded-xl border border-yellow-300 bg-yellow-50 px-5 py-4 text-base text-yellow-900">
-        <AlertTriangle className="w-6 h-6 text-yellow-600 mt-0.5" />
+      <div className="flex items-center gap-3 rounded-xl border border-yellow-300 bg-yellow-50 px-5 py-4 text-base text-yellow-900">
+        <AlertTriangle className="w-6 h-6 text-yellow-600" />
         <p>
-          <span className="font-semibold">Disclaimer:</span>Educational only. Not medical advice. Always  consult your physician 
+          <span className="font-semibold">Disclaimer:</span> Educational session only.
         </p>
       </div>
 
-      {/* ALSO COMING IN OTHER LANGUAGES */}
+      {/* Language Availability — EXACTLY BELOW DISCLAIMER */}
       <div className="mt-6 rounded-xl border border-orange-200 bg-orange-50 px-5 py-4">
         <div className="flex items-start gap-3">
-          <span className="text-xl">🌐</span>
+          <span className="text-lg">🌐</span>
           <div>
             <p className="text-base font-semibold text-slate-900">
               Also Coming in English & Telugu.
@@ -957,24 +995,20 @@ export default function FeaturedEvent() {
             <div className="flex flex-wrap gap-3 mt-4">
               <button
                 onClick={() => {
-                  setNotifyTitle(
-                    'Notify me when English sessions are available'
-                  )
+                  setNotifyTitle('Notify me when English sessions are available')
                   setNotifyOpen(true)
                 }}
-                className="rounded-full bg-white px-4 py-2 text-sm font-medium border hover:bg-slate-50"
+                className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-medium text-slate-700 border hover:bg-slate-50"
               >
                 🇬🇧 English — Notify Me
               </button>
 
               <button
                 onClick={() => {
-                  setNotifyTitle(
-                    'Notify me when Telugu sessions are available'
-                  )
+                  setNotifyTitle('Notify me when Telugu sessions are available')
                   setNotifyOpen(true)
                 }}
-                className="rounded-full bg-white px-4 py-2 text-sm font-medium border hover:bg-slate-50"
+                className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-medium text-slate-700 border hover:bg-slate-50"
               >
                 🇮🇳 Telugu — Notify Me
               </button>
@@ -983,7 +1017,7 @@ export default function FeaturedEvent() {
         </div>
       </div>
 
-      {/* NOTIFY MODAL */}
+      {/* Notify Modal */}
       <NotifyModal
         open={notifyOpen}
         onClose={() => setNotifyOpen(false)}

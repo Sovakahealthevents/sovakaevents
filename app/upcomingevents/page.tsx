@@ -10,7 +10,7 @@ export default function EventsPage() {
 
   return (
     <>
-      <section className="max-w-7xl mx-auto px-6 py-10">
+      <section className="w-full px-6 sm:px-10 lg:px-16 py-12">
         {/* Header */}
         <div className="flex justify-between items-start mb-8">
           <div>

@@ -33,7 +33,7 @@ export const events: Event[] = [
   {
     id: 1,
     type: 'Virtual Zoom, Worldwide',
-    title: 'Cancer care in elderly',
+    title: 'Cancer Care in Elderly',
     date: '02',
     dayName: 'Monday',
     month: 'March',
@@ -51,10 +51,10 @@ export const events: Event[] = [
         id: 1,
         role: 'OPENING SPEAKER',
         name: 'Dr. Ponnandai S. Somasundar',
-        title: 'MD – Surgical Oncology Specialist',
+        title: 'MD – Surgical Oncologist | Roger Williams Medical Center',
         bio:
           'Board-certified Surgical Oncologist at Roger Williams Medical Center, Providence. 36+ years of experience in geriatric oncology.',
-        topic: 'Cancer care in elderly ',
+        topic: 'Cancer Care in Elderly ',
         topicDescription:
           "55–60% of India's cancer burden now in adults over 60. Covering frailty, multimorbidity, financial toxicity, and the urgent need for geriatric oncology policies.",
         highlights: [
