@@ -79,7 +79,7 @@ const EVENTS = [
     id: 2,
     title: 'Cancer Awareness : Cancer Care in Elderly & Breast Cancer',
     category: 'Cancer Awareness',
-    tags: ['Virtual', 'FREE', 'Telugu'],
+    tags: ['Virtual', 'FREE', 'English'],
 
     speakers: [
       {
@@ -111,7 +111,7 @@ const EVENTS = [
     id: 3,
     title: 'Cancer Awareness : Cancer Care in Elderly & Breast Cancer',
     category: 'Cancer Awareness',
-    tags: ['Virtual', 'FREE', 'English'],
+    tags: ['Virtual', 'FREE', 'Telugu'],
 
     speakers: [
       {

@@ -24,40 +24,40 @@ export default function PastEventDetail() {
             <div className="flex flex-col items-center gap-2">
  <div className="flex gap-6">
   {/* ITEM 1 */}
-  <div className="flex flex-col items-center gap-2">
-    <div className="bg-white rounded-2xl px-8 py-6 shadow-sm">
+ <div className="flex flex-col items-center gap-2">
+  <div className="bg-white rounded-2xl shadow-sm w-40 h-24 flex items-center justify-center">
+    <img
+      src="/sovakalogo.png"
+      alt="Sovaka Health"
+      className="h-10 w-auto object-contain"
+    />
+  </div>
+  <span className="text-sm font-semibold text-white">
+    Sovaka Health
+  </span>
+</div>
+
+{/* ITEM 2 */}
+<div className="flex flex-col items-center gap-2">
+  <div className="bg-white rounded-2xl  shadow-sm w-40 h-24 flex items-center justify-center">
+    <a
+      href="https://www.southasianheartcenter.org"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center justify-center w-full h-full"
+    >
       <img
-        src="/sovakalogo.png"
-        alt="Sovaka Health"
-        className="h-10 w-auto"
+        src="/partners/one.png"
+        alt="South Asian Heart Center"
+        className="h-10 w-auto object-contain"
       />
-    </div>
-    <span className="text-sm font-semibold text-white">
-      Sovaka Health
-    </span>
+    </a>
   </div>
+  <span className="text-sm font-semibold text-white text-center">
+    South Asian Heart Center
+  </span>
+</div>
 
-  {/* ITEM 2 */}
-  <div className="flex flex-col items-center gap-2">
-    <div className="bg-white rounded-2xl px-8 py-6 shadow-sm">
-      <a
-  href="https://www.southasianheartcenter.org"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="inline-flex items-center p-2 rounded-lg hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-teal-500"
->
-  <img
-    src="/partners/one.png"
-    alt="South Asian Heart Center"
-    className="h-10 w-auto"
-  />
-</a>
-
-    </div>
-    <span className="text-sm font-semibold text-white text-center">
-      South Asian Heart Center
-    </span>
-  </div>
 </div>
 
 </div>
@@ -81,10 +81,8 @@ export default function PastEventDetail() {
         {/* Intro */}
         <div className="bg-white px-6 lg:px-16 py-8 border-b">
           <p className="text-center text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Join our expert-led session on heart attack prevention and
-            cardiovascular wellness in South Asians. Learn why South Asians
-            face higher heart disease risks, how to spot early warning signs,
-            and what lifestyle changes can help prevent heart attacks.
+            Join our expert-led session on prevention and cardiovascular wellness in South Asians. <br />
+            Learn why South Asians face higher risks and what lifestyle changes can help prevent.
           </p>
         </div>
       </div>
@@ -111,7 +109,7 @@ export default function PastEventDetail() {
               <p className="text-sm font-medium text-red-700">
                 Cardiologist & Internal Medicine Specialist
               </p>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm font-medium text-red-700">
                 Co-Founder & Medical Director of SAHC at El Camino Hospital
               </p>
             </div>
@@ -184,7 +182,7 @@ export default function PastEventDetail() {
 
           {/* Highlight */}
           <div className="bg-blue-100 text-blue-800 text-sm rounded-lg px-4 py-3">
-            💙 1-hour educational session including Q&A and an opportunity to
+            ❤️ 1-hour educational session including Q&A and an opportunity to
             directly collaborate with cardiology experts
           </div>
 

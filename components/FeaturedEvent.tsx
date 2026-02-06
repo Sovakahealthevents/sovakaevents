@@ -1001,7 +1001,7 @@ export default function FeaturedEvent() {
                 }}
                 className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-medium text-slate-700 border hover:bg-slate-50"
               >
-                🇬🇧 English — Notify Me
+               🇺🇸 English — Notify Me
               </button>
 
               <button
