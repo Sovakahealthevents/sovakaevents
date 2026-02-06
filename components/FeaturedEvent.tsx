@@ -885,11 +885,12 @@ export default function FeaturedEvent() {
 
           {/* Title */}
           <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-            Cancer Care in Elderly
+            Cancer Awareness <br />
+            Cancer Care in Elderly & Breast Cancer
           </h3>
 
           {/* Points */}
-          <ul className="list-disc pl-6 space-y-4 text-lg text-gray-800">
+          {/* <ul className="list-disc pl-6 space-y-4 text-lg text-gray-800">
             <li>
               Cancer burden among adults over 60 years in the Indian population
             </li>
@@ -897,7 +898,7 @@ export default function FeaturedEvent() {
               Frailty, multimorbidity, and financial toxicity: how they affect
               treatment and recovery
             </li>
-          </ul>
+          </ul> */}
 
           {/* Speakers — NOT REMOVED */}
           <div className="mt-10 space-y-5">
@@ -917,7 +918,7 @@ export default function FeaturedEvent() {
                   MD – Surgical Oncologist | Roger Williams Medical Center
                 </p>
                 <p className="text-sm text-gray-700 mt-1">
-                  Topic: Cancer in Elderly
+                  Topic: Cancer Care in Elderly
                 </p>
               </div>
             </div>

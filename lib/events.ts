@@ -33,7 +33,7 @@ export const events: Event[] = [
   {
     id: 1,
     type: 'Virtual Zoom, Worldwide',
-    title: 'Cancer Care in Elderly',
+    title: 'Cancer Awareness : Cancer Care in Elderly & Breast Cancer',
     date: '02',
     dayName: 'Monday',
     month: 'March',

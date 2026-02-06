@@ -104,20 +104,20 @@ export default function Header() {
           </Link>
 
           {/* Support */}
-          <button
+          {/* <button
             onClick={() => setShowEmail(!showEmail)}
             className="font-medium text-gray-800 hover:text-orange-500"
           >
             Support
-          </button>
+          </button> */}
 
           {/* Donate */}
-          <button
+          {/* <button
             onClick={() => setShowEmail(!showEmail)}
             className="font-medium text-gray-800 hover:text-orange-500"
           >
             Donate
-          </button>
+          </button> */}
         </nav>
 
         {/* Mobile Menu Button */}
