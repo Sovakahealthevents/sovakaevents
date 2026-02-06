@@ -101,7 +101,7 @@ export function RegisterModal({
             Register for Free
           </h2>
           <p className="text-xs sm:text-sm text-slate-500">
-            Cancer Awareness Camp: Elderly & Breast Cancer
+            Cancer Awareness : Cancer Care in Elderly & Breast Cancer
           </p>
         </div>
  
