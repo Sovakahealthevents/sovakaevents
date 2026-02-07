@@ -83,10 +83,17 @@ export default function FeedbackForm({ onSubmit }: FeedbackFormProps) {
 
       {/* Email (optional) */}
       <input
-        type="email"
-        placeholder="Email (optional)"
+        type="countru"
+        placeholder="Country of Residence"
         value={email}
-        onChange={(e) => setEmail(e.target.value)}
+        
+        className="w-full rounded-xl border px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+      />
+      <input
+        type="language"
+        placeholder="prefered Language"
+        value={email}
+        
         className="w-full rounded-xl border px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
       />
 
@@ -99,7 +106,7 @@ export default function FeedbackForm({ onSubmit }: FeedbackFormProps) {
       </button>
 
       <p className="text-xs text-gray-400 text-center">
-        We read every response 💚
+        We read every response ❤️
       </p>
     </form>
   )

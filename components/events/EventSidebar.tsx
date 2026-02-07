@@ -245,7 +245,7 @@ END:VCALENDAR
               <CalendarDays className="h-5 w-5 text-orange-600" />
               <div>
                 <p className="font-semibold text-gray-900">
-                  {event.month} {event.date}, 2026
+                  {event.month} {event.date}
                 </p>
                 <p className="text-xs text-gray-500">
                   {event.dayName}

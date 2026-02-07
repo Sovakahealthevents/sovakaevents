@@ -33,8 +33,8 @@ export const events: Event[] = [
   {
     id: 1,
     type: 'Virtual Zoom, Worldwide',
-    title: 'Cancer Awareness : Cancer Care in Elderly & Breast Cancer',
-    date: '02',
+    title: 'Cancer Awareness : Cancer Care in Elderly & Breast Cancer In Women',
+    date: '02-2026',
     dayName: 'Monday',
     month: 'March',
     time: '10:00 AM IST',
@@ -44,7 +44,7 @@ export const events: Event[] = [
     free: true,
 
     aboutEvent:
-      "Join two distinguished oncologists for a comprehensive cancer awareness camp. Dr. Somasundar will address the growing cancer burden in India's ageing population, while Dr. Raghu Ram will focus on breast cancer awareness and early detection.",
+      "Join two distinguished surgeons for a comprehensive cancer awareness camp. Dr. Somasundar will address the growing cancer burden in India's ageing population, while Dr. Raghu Ram will focus on breast cancer awareness and early detection.",
 
     speakers: [
       {
@@ -53,10 +53,10 @@ export const events: Event[] = [
         name: 'Dr. Ponnandai S. Somasundar',
         title: 'MD – Surgical Oncologist | Roger Williams Medical Center',
         bio:
-          'Board-certified Surgical Oncologist at Roger Williams Medical Center, Providence. 36+ years of experience in geriatric oncology.',
+          'Surgical Oncologist at Roger Williams Medical Center, Providence. 36+ years of experience in geriatric oncology.',
         topic: 'Cancer Care in Elderly ',
         topicDescription:
-          "55–60% of India's cancer burden now in adults over 60. Covering frailty, multimorbidity, financial toxicity, and the urgent need for geriatric oncology policies.",
+          "• Cancer burden in adults over 60 years in the Indian population • Frailty, multimorbidity and financial toxicity how they affect treatment and recovery",
         highlights: [
           "55–60% of India's cancer burden in adults over 60",
           'Frailty & multimorbidity challenges',

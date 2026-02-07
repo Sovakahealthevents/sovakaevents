@@ -425,10 +425,10 @@ and{" "}
         {/* Disclaimer */}
         <p className="text-[10px] sm:text-[11px] leading-relaxed text-slate-400">
           <span className="font-semibold">MEDICAL DISCLAIMER:</span>{" "}
-           The services provided by Sovaka Health are for general informational
-          purposes only and are not a substitute for professional medical care,
-          diagnosis, or treatment. Always seek the advice of a licensed
-          physician or other qualified health provider.
+           The services provided by Sovaka Health are for general informational purposes only and are not a substitute for professional medical care, diagnosis, or treatment.
+Sovaka Health does not provide medical advice, and nothing on the services should be interpreted as such. Always seek the advice of a licensed physician or other
+qualified health provider in your country or place of residence with any questions you may have regarding a medical or health condition. Never disregard professional
+medical advice or delay seeking it because of something you have read, heard, or received through the services.
         </p>
       </div>
     </Modal>

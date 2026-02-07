@@ -251,12 +251,12 @@ import { Handshake } from 'lucide-react'
 const partners = [
   {
     logo: '/partners/five.jpeg', // KIMS
-    url: 'https://www.kimshospitals.com',
+    url: 'https://breastcancerindia.org/',
     size: 'large',
   },
   {
     logo: '/partners/four.jpeg', // USHA
-    url: 'http://www.ubf.org.in',
+    url: 'https://breastcancerindia.org/',
     size: 'large',
   },
 ]

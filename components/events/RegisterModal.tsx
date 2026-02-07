@@ -101,7 +101,7 @@ export function RegisterModal({
             Register for Free
           </h2>
           <p className="text-xs sm:text-sm text-slate-500">
-            Cancer Awareness : Cancer Care in Elderly & Breast Cancer
+             Cancer Care in Elderly & Breast Cancer In Women
           </p>
         </div>
  
@@ -217,12 +217,11 @@ and{" "}
  
         {/* Medical Disclaimer */}
         <p className="text-[10px] leading-relaxed text-slate-400 pt-2">
-          <span className="font-semibold">MEDICAL DISCLAIMER:</span> The services
-          provided are for general informational purposes only and are not a
-          substitute for professional medical advice, diagnosis, or treatment.
-          Always seek the advice of a licensed physician or other qualified
-          health provider with any questions you may have regarding a medical
-          condition.
+          <span className="font-semibold">MEDICAL DISCLAIMER:</span> The services provided by Sovaka Health are for general informational purposes only and are not a substitute for professional medical care,
+diagnosis, or treatment. Sovaka Health does not provide medical advice, and nothing on the services should be interpreted as such.
+Always seek the advice of a licensed physician or other qualified health provider in your country or place of residence with any questions
+you may have regarding a medical or health condition. Never disregard professional medical advice or delay seeking it because of
+something you have read, heard, or received through the services.
         </p>
       </div>
     </Modal>

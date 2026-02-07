@@ -169,6 +169,7 @@ export default function HeroSection() {
                 { value: '3+', label: 'Expert Speakers' },
                 { value: '30+', label: 'Global Attendees' },
                 { value: '3+', label: 'Health Topics' },
+                { value: '3+', label: 'Languages' },
               ].map((stat) => (
                 <div key={stat.label}>
                   <p className="text-2xl sm:text-3xl font-bold text-gray-900">

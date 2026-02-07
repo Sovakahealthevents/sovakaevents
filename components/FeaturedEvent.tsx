@@ -825,11 +825,12 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { Calendar, Clock, Video, AlertTriangle } from 'lucide-react'
 import { NotifyModal } from './events/NotifyModal'
+import { RegisterModal } from './events/RegisterModal'
 
 
 export default function FeaturedEvent() {
   const eventId = 1
-
+  const [open, setOpen] = useState(false)
   const [notifyOpen, setNotifyOpen] = useState(false)
   const [notifyTitle, setNotifyTitle] = useState('')
 
@@ -881,12 +882,16 @@ export default function FeaturedEvent() {
             <span className="px-4 py-1.5 rounded-full bg-orange-100 text-orange-700 text-sm font-semibold">
               🇮🇳 In Hindi
             </span>
+            <span className="px-4 py-1.5 rounded-full bg-orange-100 text-orange-700 text-sm font-semibold">
+              1hr Session + Q&amp;A
+            </span>
+            
           </div>
 
           {/* Title */}
           <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-            Cancer Awareness <br />
-            Cancer Care in Elderly & Breast Cancer
+            {/* Cancer Awareness <br /> */}
+            Cancer Care in Elderly & <br />Breast Cancer In Women
           </h3>
 
           {/* Points */}
@@ -918,7 +923,7 @@ export default function FeaturedEvent() {
                   MD – Surgical Oncologist | Roger Williams Medical Center
                 </p>
                 <p className="text-sm text-gray-700 mt-1">
-                  Topic: Cancer Care in Elderly
+                  Topic: Cancer Care in Elderly 
                 </p>
               </div>
             </div>
@@ -958,15 +963,23 @@ export default function FeaturedEvent() {
               <Clock className="w-5 h-5 ml-2" />
               10:00 AM IST
             </div>
+                      
           </div>
 
           {/* Actions */}
           <div className="flex flex-wrap gap-4">
-            <Link
+            <button
+            onClick={() => setOpen(true)}
+            className="rounded-full bg-teal-600 px-10 py-4 text-lg text-white font-semibold hover:bg-teal-700 transition"
+          >
+            Register Now – It’s Free
+          </button>
+             
+             <Link
               href={`/event-details/${eventId}`}
               className="rounded-full bg-teal-600 px-10 py-4 text-lg text-white font-semibold hover:bg-teal-700 transition"
             >
-              Register Now →
+              Event Details →
             </Link>
           </div>
         </div>
@@ -999,7 +1012,7 @@ export default function FeaturedEvent() {
                   setNotifyTitle('Notify me when English sessions are available')
                   setNotifyOpen(true)
                 }}
-                className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-medium text-slate-700 border hover:bg-slate-50"
+                className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-medium text-slate-700 border hover:bg-slate-50 no-underline hover:underline cursor-pointer"
               >
                🇺🇸 English — Notify Me
               </button>
@@ -1009,7 +1022,7 @@ export default function FeaturedEvent() {
                   setNotifyTitle('Notify me when Telugu sessions are available')
                   setNotifyOpen(true)
                 }}
-                className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-medium text-slate-700 border hover:bg-slate-50"
+                className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-medium text-slate-700 border hover:bg-slate-50 no-underline hover:underline cursor-pointer"
               >
                 🇮🇳 Telugu — Notify Me
               </button>
@@ -1024,6 +1037,11 @@ export default function FeaturedEvent() {
         onClose={() => setNotifyOpen(false)}
         title={notifyTitle}
       />
+      {/* Register Modal */}
+            <RegisterModal
+              open={open}
+              onClose={() => setOpen(false)}
+            />
     </section>
   )
 }

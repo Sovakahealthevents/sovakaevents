@@ -66,7 +66,7 @@ export default function AboutSection({ event }: { event: Event }) {
           {[
             'Expert insights from leading specialists',
             'Culturally relevant health education',
-            'Live Q&A with experienced oncologists',
+            'Live Q&A with experienced surgeon',
             'Actionable prevention and early-detection guidance',
           ].map((item) => (
             <li

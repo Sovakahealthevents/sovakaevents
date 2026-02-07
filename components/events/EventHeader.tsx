@@ -67,6 +67,11 @@ export function EventHeader({ event }: { event: any }) {
             text="Worldwide"
             className="bg-gray-100 text-gray-700"
           />
+          <Badge
+            
+            text="1hr Session + Q&A"
+            className="bg-orange-100 text-orange-700 text-sm font-semibold"
+          />
         </div>
 
         {/* Title */}

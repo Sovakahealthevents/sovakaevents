@@ -44,7 +44,7 @@ export default function Footer() {
 
         {/* Contact */}
         <div>
-          <h4 className="font-semibold mb-4 text-white">Contact</h4>
+          <h4 className="font-semibold mb-4 text-white">Contact & Support</h4>
 
           <div className="space-y-4 text-teal-100">
             {/* <div>
@@ -64,22 +64,17 @@ export default function Footer() {
       <div className="border-t border-teal-600" />
       <div className="px-6 lg:px-16 py-10 text-sm text-teal-100 leading-relaxed">
         <p>
-          <span className="font-semibold">Medical Disclaimer:</span> The services
-          provided by Sovaka Health are for general informational purposes only
-          and are not a substitute for professional medical care, diagnosis, or
-          treatment. Sovaka Health does not provide medical advice. Always seek
-          the advice of a licensed physician or other qualified health provider
-          in your country or place of residence with any questions you may have
-          regarding a medical or health condition. Never disregard professional
-          medical advice or delay seeking it because of something you have
-          received through the services.
+          <span className="font-semibold">Medical Disclaimer:</span> The services provided by Sovaka Health are for general informational purposes only and are not a substitute for professional medical care, diagnosis, or treatment.
+Sovaka Health does not provide medical advice, and nothing on the services should be interpreted as such. Always seek the advice of a licensed physician or other
+qualified health provider in your country or place of residence with any questions you may have regarding a medical or health condition. Never disregard professional
+medical advice or delay seeking it because of something you have read, heard, or received through the services.
         </p>
       </div>
 
       {/* Bottom */}
       <div className="border-t border-teal-600" />
       <div className="px-6 lg:px-16 py-6 flex flex-col lg:flex-row gap-4 items-center justify-between text-sm text-teal-200">
-        <p>© Sovaka Health™. All rights reserved.</p>
+        <p>© Sovaka Health™. All rights reserved. Patent Pending</p>
 
         <div className="flex gap-6">
          

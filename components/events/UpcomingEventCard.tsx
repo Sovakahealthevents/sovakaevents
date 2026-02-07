@@ -529,13 +529,13 @@ export function UpcomingEventCard({
             Notify Me →
           </Button>
 
-          <Button
+          {/* <Button
             variant="outline"
             className="rounded-xl px-5 text-sm font-semibold"
             onClick={() => router.push(`/event-details/${event.id}`)}
           >
             Add to Calendar
-          </Button>
+          </Button> */}
         </div>
       </div>
     </div>
