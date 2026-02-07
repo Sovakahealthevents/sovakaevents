@@ -56,7 +56,7 @@ export const events: Event[] = [
           'Surgical Oncologist at Roger Williams Medical Center, Providence. 36+ years of experience in geriatric oncology.',
         topic: 'Cancer Care in Elderly ',
         topicDescription:
-          "• Cancer burden in adults over 60 years in the Indian population • Frailty, multimorbidity and financial toxicity how they affect treatment and recovery",
+          "Cancer burden in adults over 60 years in the Indian population.Frailty, multimorbidity and financial toxicity how they affect treatment and recovery",
         highlights: [
           "55–60% of India's cancer burden in adults over 60",
           'Frailty & multimorbidity challenges',
