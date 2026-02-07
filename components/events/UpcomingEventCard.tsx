@@ -510,10 +510,10 @@ export function UpcomingEventCard({
             {event.meta.date}
           </span>
 
-          <span className="flex items-center gap-2 text-gray-600">
+          {/* <span className="flex items-center gap-2 text-gray-600">
             <Globe size={16} />
             {event.meta.region ?? 'Worldwide'}
-          </span>
+          </span> */}
 
           <span className="px-3 py-1 rounded-full bg-orange-100 text-orange-600 font-semibold text-xs">
             {event.meta.duration}
