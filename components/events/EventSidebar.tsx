@@ -155,7 +155,12 @@ import {
 import { Event } from '@/lib/events'
 import { RegisterModal } from './RegisterModal'
 
-export function EventSidebar({ event }: { event: Event }) {
+type Props = {
+  event: Event
+  eventId: string
+}
+
+export function EventSidebar({ event, eventId }: Props) {
   const [open, setOpen] = useState(false)
 
   const eventUrl =
@@ -334,6 +339,7 @@ END:VCALENDAR
       <RegisterModal
         open={open}
         onClose={() => setOpen(false)}
+        eventId={eventId}
       />
     </>
   )

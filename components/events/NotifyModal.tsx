@@ -247,27 +247,81 @@ import { useState } from "react"
 
 import { Bell, User, Mail } from "lucide-react"
 import { Modal } from "../ui/Modal"
+import { useEffect } from "react"
+
  
 export function NotifyModal({
   open,
   onClose,
   title,
+  eventId,
 }: {
   open: boolean
   onClose: () => void
   title: string
+  eventId: string
 }) {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [above18, setAbove18] = useState(false)
   const [agreed, setAgreed] = useState(false)
   const [emailTouched, setEmailTouched] = useState(false)
+  
  
   const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
   const isCtaEnabled =
     above18 && agreed && emailValid && name.trim().length > 0
+  const [loading, setLoading] = useState(false)
+  const [success, setSuccess] = useState(false)
+  const [error, setError] = useState("")
+  // const eventId = slugify(title)
+
+const submitNotify = async () => {
+  if (!isCtaEnabled || loading) return
+
+  setLoading(true)
+  setError("")
+
+  try {
+    const res = await fetch("/api/notify", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name,
+        email,
+        above18,
+        agreed,
+        eventId, // ✅ REQUIRED
+      }),
+    })
+
+    const data = await res.json()
+
+    if (!res.ok) {
+      setError(data.error || "Failed to subscribe")
+      return
+    }
+
+    setSuccess(true)
+  } catch {
+    setError("Network error. Please try again.")
+  } finally {
+    setLoading(false)
+  }
+}
+
+useEffect(() => {
+  if (success) {
+    const t = setTimeout(() => {
+      onClose()
+    }, 2000)
+    return () => clearTimeout(t)
+  }
+}, [success, onClose])
+
  
   return (
+    
     <Modal open={open} onClose={onClose}>
       <div
         className="
@@ -397,13 +451,28 @@ and{" "}
               </span>
             </label>
           </div>
+          {success && (
+  <p className="text-sm text-green-600 text-center">
+    ✅ You’ll be notified when registration opens
+  </p>
+)}
+
+{error && (
+  <p className="text-sm text-red-600 text-center">
+    {error}
+  </p>
+)}
+
  
           {/* CTA */}
           <button
-            disabled={!isCtaEnabled}
+            
+  disabled={!isCtaEnabled || loading}
+  onClick={submitNotify}
+
             className={`
               w-full rounded-full py-2.5 sm:py-3
-              text-sm font-semibold transition
+              text-sm font-semibold transition cursor-pointer
               ${
                 isCtaEnabled
                   ? "bg-teal-600 text-white hover:bg-teal-700 active:scale-[0.98]"

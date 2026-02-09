@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { UpcomingEventsGrid } from '@/components/events/UpcomingEventsGrid'
 import { NotifyModal } from '@/components/events/NotifyModal'
 
+
 export default function EventsPage() {
   const [notifyOpen, setNotifyOpen] = useState(false)
   const [title, setTitle] = useState('')
@@ -33,11 +34,12 @@ export default function EventsPage() {
         />
       </section>
 
-      <NotifyModal
+      {/* <NotifyModal
         open={notifyOpen}
         onClose={() => setNotifyOpen(false)}
         title={title}
-      />
+        // eventId={eventId}
+      /> */}
     </>
   )
 }

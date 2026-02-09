@@ -57,13 +57,17 @@ import { useState } from "react"
 
 import { CheckCircle, User, Mail } from "lucide-react"
 import { Modal } from "../modal"
+import { useEffect } from "react"
+
  
 export function RegisterModal({
   open,
   onClose,
+  eventId,
 }: {
   open: boolean
   onClose: () => void
+  eventId: string
 }) {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
@@ -74,6 +78,63 @@ export function RegisterModal({
  
   const isDisabled =
     !name.trim() || !isEmailValid || !isAdult || !agreed
+
+  const [loading, setLoading] = useState(false)
+  const [success, setSuccess] = useState(false)
+  const [error, setError] = useState("")
+
+  const submitRegistration = async () => {
+  if (isDisabled || loading) return
+
+  setLoading(true)
+  setError("")
+
+  try {
+    const res = await fetch("/api/register", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name,
+        email,
+        isAdult,
+        agreed,
+        eventId,
+      }),
+    })
+
+    const data = await res.json()
+
+    if (res.status === 409) {
+  setSuccess(true)
+  setError("You are already registered for this event 🎉")
+  return
+}
+
+if (!res.ok) {
+  setError(data.error || "Registration failed")
+  return
+}
+
+
+    setSuccess(true)
+  } catch (err) {
+  console.error(err)
+  setError("Server unreachable or crashed")
+} finally {
+    setLoading(false)
+  }
+}
+useEffect(() => {
+  if (success) {
+    const timer = setTimeout(() => {
+      onClose()
+    }, 2000)
+
+    return () => clearTimeout(timer)
+  }
+}, [success, onClose])
+
+  
  
   return (
     <Modal open={open} onClose={onClose}>
@@ -195,10 +256,23 @@ and{" "}
           </div>
  
           {/* Button */}
+          {success && (
+            <p className="text-sm text-green-600 text-center">
+              🎉 You are successfully registered!
+            </p>
+          )}
+
+          {error && (
+            <p className="text-sm text-red-600 text-center">
+              {error}
+            </p>
+          )}
+
           <button
-            disabled={isDisabled}
+            disabled={isDisabled || loading}
+            onClick={submitRegistration}
             className={`
-              w-full rounded-full py-3 text-sm font-semibold transition
+              w-full rounded-full py-3 text-sm font-semibold transition cursor-pointer
               ${
                 isDisabled
                   ? "bg-teal-300 text-white cursor-not-allowed"

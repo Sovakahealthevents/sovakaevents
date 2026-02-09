@@ -829,7 +829,11 @@ import { RegisterModal } from './events/RegisterModal'
 
 
 export default function FeaturedEvent() {
-  const eventId = 1
+  const eventData = {
+  id: '10e2e277-008e-4f8a-964e-94cf9056d0a1',
+  title: 'Cancer Care Awareness ABCs of Breast Cancer – What Every Woman Must Know!',
+  slug: 'cancer-care-awareness',
+}
   const [open, setOpen] = useState(false)
   const [notifyOpen, setNotifyOpen] = useState(false)
   const [notifyTitle, setNotifyTitle] = useState('')
@@ -858,7 +862,7 @@ export default function FeaturedEvent() {
           </div>
 
           <Image
-            src="/cancer-awareness.jpg"
+            src="/cancercarewomen.png"
             alt="Cancer Awareness Camp"
             fill
             className="object-cover"
@@ -891,23 +895,13 @@ export default function FeaturedEvent() {
           {/* Title */}
           <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
             {/* Cancer Awareness <br /> */}
-            Cancer Care in Elderly & <br />Breast Cancer In Women
+            Cancer Care Awareness <br/>ABCs of Breast Cancer – What Every Woman Must Know!
           </h3>
 
-          {/* Points */}
-          {/* <ul className="list-disc pl-6 space-y-4 text-lg text-gray-800">
-            <li>
-              Cancer burden among adults over 60 years in the Indian population
-            </li>
-            <li>
-              Frailty, multimorbidity, and financial toxicity: how they affect
-              treatment and recovery
-            </li>
-          </ul> */}
-
+         
           {/* Speakers — NOT REMOVED */}
           <div className="mt-10 space-y-5">
-            <div className="flex items-start gap-4 p-5 rounded-xl bg-teal-50 border border-teal-100">
+            {/* <div className="flex items-start gap-4 p-5 rounded-xl bg-teal-50 border border-teal-100">
               <Image
                 src="/somasundar.png"
                 alt=""
@@ -926,7 +920,7 @@ export default function FeaturedEvent() {
                   Topic: Cancer Care in Elderly 
                 </p>
               </div>
-            </div>
+            </div> */}
 
             <div className="flex items-start gap-4 p-5 rounded-xl bg-teal-50 border border-teal-100">
               <Image
@@ -944,7 +938,7 @@ export default function FeaturedEvent() {
                   Padma Shri Awardee • Consultant Surgeon: KIMS-USHALAKSHMI Centre for Breast Diseases
                 </p>
                 <p className="text-sm text-gray-700 mt-1">
-                  Topic: ABCs of Breast Cancer
+                  Topic: Essential knowledge about breast cancer awareness, early detection, and modern treatment approaches.
                 </p>
               </div>
             </div>
@@ -970,17 +964,19 @@ export default function FeaturedEvent() {
           <div className="flex flex-wrap gap-4">
             <button
             onClick={() => setOpen(true)}
-            className="rounded-full bg-teal-600 px-10 py-4 text-lg text-white font-semibold hover:bg-teal-700 transition"
+            className="rounded-full bg-teal-600 px-10 py-4 text-lg text-white font-semibold hover:bg-teal-700 transition cursor-pointer"
           >
             Register Now – It’s Free
           </button>
              
-             <Link
-              href={`/event-details/${eventId}`}
-              className="rounded-full bg-teal-600 px-10 py-4 text-lg text-white font-semibold hover:bg-teal-700 transition"
-            >
-              Event Details →
-            </Link>
+            
+            <Link
+  href={`/event-details/${eventData.slug}`}
+  className="rounded-full bg-teal-600 px-10 py-4 text-lg text-white font-semibold hover:bg-teal-700 transition"
+>
+  Event Details →
+</Link>
+
           </div>
         </div>
       </div>
@@ -1032,15 +1028,18 @@ export default function FeaturedEvent() {
       </div>
 
       {/* Notify Modal */}
-      <NotifyModal
-        open={notifyOpen}
-        onClose={() => setNotifyOpen(false)}
-        title={notifyTitle}
-      />
+     <NotifyModal
+  open={notifyOpen}
+  onClose={() => setNotifyOpen(false)}
+  title={notifyTitle}
+  eventId={eventData.id}
+/>
+
       {/* Register Modal */}
             <RegisterModal
               open={open}
               onClose={() => setOpen(false)}
+              eventId={eventData.id}
             />
     </section>
   )

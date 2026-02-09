@@ -12,4 +12,22 @@
  
  
 Educate, Empower & Elevate your Health & Wellbeing
+
+
+
+table sql 
+
+INSERT INTO events (
+  title,
+  slug,
+  starts_at,
+  is_live
+)
+VALUES (
+  'Cancer Care in Elderly',
+  'cancer-care-in-elderly',
+  '2026-02-20 05:30:00+00',
+  false
+);
+
  

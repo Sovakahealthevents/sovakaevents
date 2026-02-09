@@ -4,6 +4,7 @@ import HeroSection from '../components/hero-section'
 import PartnersScrollbar from '../components/partners-scrollbar'
 import UpcomingEvents from '../components/upcoming-events'
 import FeaturedEvent from '@/components/FeaturedEvent'
+import OnDemandEvent from '@/components/OnDemandEvent'
 
 export default function HomePage() {
   return (
@@ -24,6 +25,7 @@ export default function HomePage() {
     
       {/* <UpcomingEvents /> */}
       <FeaturedEvent />
+      <OnDemandEvent />
      <div className="flex justify-center my-12 px-4">
   <p className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-teal-100 to-orange-100 px-6 py-3 text-center text-sm sm:text-base md:text-lg font-semibold text-teal-800 shadow-sm">
     ✨ Educate, Empower & Elevate your Health & Wellbeing
