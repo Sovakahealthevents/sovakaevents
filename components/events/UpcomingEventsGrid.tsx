@@ -75,38 +75,38 @@ const EVENTS = [
     },
   },
 
-  {
-    id: 2,
-    title: 'Cancer Care in Elderly & Breast Cancer In Women',
-    category: 'Cancer Awareness',
-    tags: ['Virtual', 'FREE', 'English','Telugu'],
+  // {
+  //   id: 2,
+  //   title: 'Cancer Care in Elderly & Breast Cancer In Women',
+  //   category: 'Cancer Awareness',
+  //   tags: ['Virtual', 'FREE', 'English','Telugu'],
 
-    speakers: [
-      {
-        name: 'Dr. Ponnandai Somasundar',
-        title: 'MD – Surgical Oncologist',
-        org: 'Roger Williams Medical Center',
-        image: '/somasundar.png',
-      },
-      {
-        name: 'Dr. P. Raghu Ram OBE',
-        title: 'Padma Shri Awardee • Consultant Surgeon',
-        org: ' KIMS-USHALAKSHMI Centre for Breast Diseases',
-        image: '/raghu.png',
-      },
-    ],
+  //   speakers: [
+  //     {
+  //       name: 'Dr. Ponnandai Somasundar',
+  //       title: 'MD – Surgical Oncologist',
+  //       org: 'Roger Williams Medical Center',
+  //       image: '/somasundar.png',
+  //     },
+  //     {
+  //       name: 'Dr. P. Raghu Ram OBE',
+  //       title: 'Padma Shri Awardee • Consultant Surgeon',
+  //       org: ' KIMS-USHALAKSHMI Centre for Breast Diseases',
+  //       image: '/raghu.png',
+  //     },
+  //   ],
 
-    highlights: [
-      'Founding Director, KIMS-USHALAKSHMI Centre for Breast Diseases. ',
-      'Founder & Chairman, Ushalakshmi Breast Cancer Foundation.',
-    ],
+  //   highlights: [
+  //     'Founding Director, KIMS-USHALAKSHMI Centre for Breast Diseases. ',
+  //     'Founder & Chairman, Ushalakshmi Breast Cancer Foundation.',
+  //   ],
 
-    meta: {
-      mode: 'Virtual Zoom, Worldwide',
-      date: 'Date TBA',
-      duration: '1hr Session + Q&A',
-    },
-  },
+  //   meta: {
+  //     mode: 'Virtual Zoom, Worldwide',
+  //     date: 'Date TBA',
+  //     duration: '1hr Session + Q&A',
+  //   },
+  // },
   // {
   //   id: 3,
   //   title: 'Cancer Care in Elderly & Breast Cancer In Women',
