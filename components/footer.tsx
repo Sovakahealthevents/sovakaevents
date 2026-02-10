@@ -32,9 +32,9 @@ export default function Footer() {
 <li>
   <a href="/upcomingevents" className="hover:underline cursor-pointer">Upcoming Events</a>
 </li>
-<li>
+{/* <li>
   <a href="/library" className="hover:underline cursor-pointer">Library</a>
-</li>
+</li> */}
 <li>
   <a href="/feedback" className="hover:underline cursor-pointer">MVP Feedback</a>
 </li>
