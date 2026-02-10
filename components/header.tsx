@@ -82,19 +82,19 @@ export default function Header() {
             Home
           </Link>
 
-          {/* <Link
+          <Link
             href="/upcomingevents"
             className="font-medium text-gray-800 hover:text-orange-500"
           >
             Upcoming Events
-          </Link> */}
+          </Link>
 
-          <Link
+          {/* <Link
             href="/library"
             className="font-medium text-gray-800 hover:text-orange-500"
           >
             Library
-          </Link>
+          </Link> */}
 
           <Link
             href="/feedback"
@@ -143,21 +143,21 @@ export default function Header() {
             Home
           </Link>
 
-          {/* <Link
+          <Link
             href="/upcomingevents"
             onClick={() => setMenuOpen(false)}
             className="block font-medium text-gray-800"
           >
             Upcoming Events
-          </Link> */}
+          </Link>
 
-          <Link
+          {/* <Link
             href="/library"
             onClick={() => setMenuOpen(false)}
             className="block font-medium text-gray-800"
           >
             Library
-          </Link>
+          </Link> */}
 
           <Link
             href="/feedback"

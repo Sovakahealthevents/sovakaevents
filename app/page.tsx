@@ -6,6 +6,7 @@ import UpcomingEvents from '../components/upcoming-events'
 import FeaturedEvent from '@/components/FeaturedEvent'
 import OnDemandEvent from '@/components/OnDemandEvent'
 
+
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">
@@ -33,6 +34,7 @@ export default function HomePage() {
 </div>
 
       <OurPartners />
+   
      
     </div>
   )

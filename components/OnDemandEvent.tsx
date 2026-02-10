@@ -39,11 +39,17 @@ export default function OnDemandEvent() {
         
         {/* Image */}
         <div className="relative w-full lg:w-[40%] h-[280px] lg:h-auto">
-          <div className="absolute top-4 left-4 bg-white rounded-xl px-5 py-4 text-center shadow z-10">
+          {/* <div className="absolute top-4 left-4 bg-white rounded-xl px-5 py-4 text-center shadow z-10">
             <p className="text-base font-semibold text-teal-600">MAR</p>
             <p className="text-4xl font-bold text-teal-700">02</p>
             <p className="text-sm text-gray-500">2026</p>
-          </div>
+          </div> */}
+
+            <div className="absolute top-4 left-4 bg-orange-100 rounded-full px-4 py-2 shadow z-10">
+  <p className="text-sm font-semibold text-orange-700">
+    ⏳ Upcoming
+  </p>
+</div>
 
           <Image
             src="/cancercareelderly.png"
@@ -52,6 +58,9 @@ export default function OnDemandEvent() {
             className="object-cover"
             priority
           />
+          <p className="absolute bottom-3 right-3 z-10 text-xs text-white bg-black/50 px-2 py-1 rounded">
+  Image created using M365 Copilot and Lovable.dev
+</p>
         </div>
 
         {/* Content */}
@@ -68,7 +77,7 @@ export default function OnDemandEvent() {
               Cancer Awareness
             </span>
             <span className="px-4 py-1.5 rounded-full bg-orange-100 text-orange-700 text-sm font-semibold">
-              🇮🇳 In Hindi
+              🇮🇳 In English
             </span>
             <span className="px-4 py-1.5 rounded-full bg-orange-100 text-orange-700 text-sm font-semibold">
               1hr Session + Q&amp;A
@@ -98,7 +107,7 @@ export default function OnDemandEvent() {
                   Dr. Ponnandai Somasundar
                 </p>
                 <p className="text-base text-teal-700 font-medium">
-                  MD – Surgical Oncologist | Roger Williams Medical Center
+                  MD – Surgical Oncologist | Roger Williams Medical Center | USA, 36+ years of experience in geriatric oncology
                 </p>
                 <p className="text-sm text-gray-700 mt-1">
                   Topic: Cancer Care in Elderly 
@@ -148,7 +157,7 @@ they affect treatment and recovery.
           <span className="text-lg">🌐</span>
           <div>
             <p className="text-base font-semibold text-slate-900">
-              Also Coming in English & Telugu.
+              Also Coming in Hindi & Telugu.
             </p>
             <p className="text-sm text-slate-600 mt-1">
               Same expert speakers, same life-saving content — in your preferred
@@ -158,12 +167,12 @@ they affect treatment and recovery.
             <div className="flex flex-wrap gap-3 mt-4">
               <button
                 onClick={() => {
-                  setNotifyTitle('Notify me when English sessions are available')
+                  setNotifyTitle('Notify me when Hindi sessions are available')
                   setNotifyOpen(true)
                 }}
                 className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-medium text-slate-700 border hover:bg-slate-50 no-underline hover:underline cursor-pointer"
               >
-               🇺🇸 English — Notify Me
+               🇺🇸 Hindi — Notify Me
               </button>
 
               <button
