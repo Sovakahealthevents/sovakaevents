@@ -865,7 +865,7 @@ export default function FeaturedEvent() {
             src="/cancercarewomen.png"
             alt="Cancer Awareness Camp"
             fill
-            className="object-cover"
+            className="object-cover object-top"
             priority
           />
          <p className="absolute bottom-3 right-3 z-10 text-xs text-white bg-black/50 px-2 py-1 rounded">

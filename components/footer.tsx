@@ -74,7 +74,7 @@ medical advice or delay seeking it because of something you have read, heard, or
       {/* Bottom */}
       <div className="border-t border-teal-600" />
       <div className="px-6 lg:px-16 py-6 flex flex-col lg:flex-row gap-4 items-center justify-between text-sm text-teal-200">
-        <p>© Sovaka Health™. All rights reserved. Patent Pending</p>
+        <p>© Sovaka Health™. All rights reserved. Patent Pending.Materials on this site were generated with the assistance of Microsoft 365 Copilot and Lovable.dev</p>
 
         <div className="flex gap-6">
          
