@@ -58,9 +58,9 @@ export default function OnDemandEvent() {
             className="object-cover"
             priority
           />
-          <p className="absolute bottom-3 right-3 z-10 text-xs text-white bg-black/50 px-2 py-1 rounded">
+          {/* <p className="absolute bottom-3 right-3 z-10 text-xs text-white bg-black/50 px-2 py-1 rounded">
   Image created using M365 Copilot and Lovable.dev
-</p>
+</p> */}
         </div>
 
         {/* Content */}
