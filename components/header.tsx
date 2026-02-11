@@ -90,7 +90,7 @@ export default function Header() {
           </Link>
 
           <Link
-            href="/library"
+            href="/Library"
             className="font-medium text-gray-800 hover:text-orange-500"
           >
             Library
@@ -152,7 +152,7 @@ export default function Header() {
           </Link>
 
           <Link
-            href="/library"
+            href="/Library"
             onClick={() => setMenuOpen(false)}
             className="block font-medium text-gray-800"
           >
