@@ -77,7 +77,7 @@ export default function OnDemandEvent() {
               Cancer Awareness
             </span>
             <span className="px-4 py-1.5 rounded-full bg-orange-100 text-orange-700 text-sm font-semibold">
-              🇮🇳 In English
+              🇮🇳 In Hindi
             </span>
             <span className="px-4 py-1.5 rounded-full bg-orange-100 text-orange-700 text-sm font-semibold">
               1hr Session + Q&amp;A
