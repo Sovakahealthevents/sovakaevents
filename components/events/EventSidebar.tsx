@@ -165,7 +165,7 @@ export function EventSidebar({ event, eventId }: Props) {
 
   const eventUrl =
     typeof window !== 'undefined'
-      ? `${window.location.origin}/event-details/${event.id}`
+      ? `${window.location.origin}/event-details/${event.slug}`
       : ''
 
   /* ---------- Actions ---------- */
