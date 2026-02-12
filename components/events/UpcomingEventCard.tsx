@@ -386,107 +386,224 @@
 //   )
 // }
 
+
+
+// 'use client'
+
+// import { Button } from '@/components/ui/button'
+// import { Video, Calendar, Globe } from 'lucide-react'
+// import { useRouter } from 'next/navigation'
+// type Speaker = {
+//   name: string
+//   title: string
+//   org: string
+//   image: string
+// }
+
+// type Event = {
+//   id: number
+//   title: string
+//   category: string
+//   tags: string[]
+//   speakers: Speaker[]
+//   highlights: string[]
+//   meta: {
+//     mode: string
+//     date: string
+//     duration: string
+//     platform?: string
+//     region?: string
+//   }
+// }
+
+// export function UpcomingEventCard({
+//   event,
+//   onNotify,
+// }: {
+//   event: Event
+//   onNotify: (event: Event) => void
+// }) {
+//   const router = useRouter()
+
+//   return (
+//     <div className="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition w-full flex flex-col">
+
+//       {/* TOP CONTENT */}
+//       <div>
+//         {/* TAGS */}
+//         <div className="flex flex-wrap gap-2 mb-4">
+//           {event.tags.map((tag) => (
+//             <span
+//               key={tag}
+//               className={`px-3 py-1 rounded-full text-xs font-semibold
+//                 ${
+//                   tag === 'Virtual'
+//                     ? 'bg-teal-100 text-teal-700'
+//                     : tag === 'FREE'
+//                     ? 'bg-green-500 text-white'
+//                     : tag === 'Hindi' || tag === 'English' || tag === 'Telugu'
+//                     ? 'bg-orange-100 text-orange-700'
+//                     : 'bg-gray-100 text-gray-700'
+//                 }`}
+//             >
+//               {tag}
+//             </span>
+//           ))}
+
+//           <span className="px-3 py-1 rounded-full bg-gray-100 text-gray-700 text-xs font-medium">
+//             {event.category}
+//           </span>
+//         </div>
+
+//         {/* TITLE */}
+//         {/* <h2 className="text-xl font-bold text-gray-900 leading-snug mb-4"> */}
+//         <h2 className="text-2xl font-bold mb-4">
+
+//           {event.title}
+//         </h2>
+
+//         {/* SPEAKER CARD */}
+//         {/* SPEAKERS */}
+// <div className="space-y-3 mb-4">
+//   {event.speakers.map((speaker, index) => (
+//     <div
+//       key={index}
+//       className="flex gap-4 bg-teal-50 rounded-xl p-4"
+//     >
+//       <img
+//         src={speaker.image}
+//         alt={speaker.name}
+//         className="w-14 h-14 rounded-full object-cover"
+//       />
+//       <div>
+//         <p className="font-bold text-gray-900">{speaker.name}</p>
+//         <p className="text-sm text-teal-700 font-medium">
+//           {speaker.title}
+//         </p>
+//         <p className="text-sm text-gray-600">{speaker.org}</p>
+//       </div>
+//     </div>
+//   ))}
+// </div>
+
+
+//         {/* HIGHLIGHTS */}
+//         {/* <ul className="text-sm text-gray-600 space-y-1 list-disc pl-5"> */}
+//         <ul className="text-base text-gray-700 space-y-2 list-disc pl-5">
+//           {event.highlights.map((item, index) => (
+//             <li key={index}>{item}</li>
+//           ))}
+//         </ul>
+//       </div>
+
+//       {/* BOTTOM FIXED SECTION */}
+//       <div className="mt-auto pt-6">
+
+//         {/* META ROW — CENTERED */}
+//         <div className="flex flex-wrap justify-center items-center gap-4 bg-teal-50 border border-teal-100 rounded-xl px-4 py-3 mb-4 text-sm">
+
+//           <span className="flex items-center gap-2 text-teal-700 font-semibold">
+//             <Video size={16} />
+//             {event.meta.mode}
+//           </span>
+
+//           <span className="flex items-center gap-2 text-gray-600">
+//             <Calendar size={16} />
+//             {event.meta.date}
+//           </span>
+
+//           {/* <span className="flex items-center gap-2 text-gray-600">
+//             <Globe size={16} />
+//             {event.meta.region ?? 'Worldwide'}
+//           </span> */}
+
+//           <span className="px-3 py-1 rounded-full bg-orange-100 text-orange-600 font-semibold text-xs">
+//             {event.meta.duration}
+//           </span>
+//         </div>
+
+//         {/* CTA */}
+//         <div className="flex gap-3">
+//           <Button
+//   onClick={() => onNotify(event)}
+// >
+//   Notify Me →
+// </Button>
+
+
+//           {/* <Button
+//             variant="outline"
+//             className="rounded-xl px-5 text-sm font-semibold"
+//             onClick={() => router.push(`/event-details/${event.id}`)}
+//           >
+//             Add to Calendar
+//           </Button> */}
+//         </div>
+//       </div>
+//     </div>
+//   )
+// }
+
+
+
 'use client'
 
 import { Button } from '@/components/ui/button'
-import { Video, Calendar, Globe } from 'lucide-react'
-import { useRouter } from 'next/navigation'
-type Speaker = {
-  name: string
-  title: string
-  org: string
-  image: string
-}
-
-type Event = {
-  id: number
-  title: string
-  category: string
-  tags: string[]
-  speakers: Speaker[]
-  highlights: string[]
-  meta: {
-    mode: string
-    date: string
-    duration: string
-    platform?: string
-    region?: string
-  }
-}
+import { Video, Calendar } from 'lucide-react'
+import { type Event } from './events-data'
 
 export function UpcomingEventCard({
   event,
   onNotify,
 }: {
   event: Event
-  onNotify: (title: string) => void
+  onNotify: (event: Event) => void
 }) {
-  const router = useRouter()
-
   return (
     <div className="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition w-full flex flex-col">
 
-      {/* TOP CONTENT */}
       <div>
         {/* TAGS */}
         <div className="flex flex-wrap gap-2 mb-4">
           {event.tags.map((tag) => (
             <span
               key={tag}
-              className={`px-3 py-1 rounded-full text-xs font-semibold
-                ${
-                  tag === 'Virtual'
-                    ? 'bg-teal-100 text-teal-700'
-                    : tag === 'FREE'
-                    ? 'bg-green-500 text-white'
-                    : tag === 'Hindi' || tag === 'English' || tag === 'Telugu'
-                    ? 'bg-orange-100 text-orange-700'
-                    : 'bg-gray-100 text-gray-700'
-                }`}
+              className="px-3 py-1 rounded-full text-xs font-semibold bg-gray-100 text-gray-700"
             >
               {tag}
             </span>
           ))}
-
-          <span className="px-3 py-1 rounded-full bg-gray-100 text-gray-700 text-xs font-medium">
-            {event.category}
-          </span>
         </div>
 
         {/* TITLE */}
-        {/* <h2 className="text-xl font-bold text-gray-900 leading-snug mb-4"> */}
         <h2 className="text-2xl font-bold mb-4">
-
           {event.title}
         </h2>
 
-        {/* SPEAKER CARD */}
         {/* SPEAKERS */}
-<div className="space-y-3 mb-4">
-  {event.speakers.map((speaker, index) => (
-    <div
-      key={index}
-      className="flex gap-4 bg-teal-50 rounded-xl p-4"
-    >
-      <img
-        src={speaker.image}
-        alt={speaker.name}
-        className="w-14 h-14 rounded-full object-cover"
-      />
-      <div>
-        <p className="font-bold text-gray-900">{speaker.name}</p>
-        <p className="text-sm text-teal-700 font-medium">
-          {speaker.title}
-        </p>
-        <p className="text-sm text-gray-600">{speaker.org}</p>
-      </div>
-    </div>
-  ))}
-</div>
-
+        <div className="space-y-3 mb-4">
+          {event.speakers.map((speaker, index) => (
+            <div
+              key={index}
+              className="flex gap-4 bg-teal-50 rounded-xl p-4"
+            >
+              <img
+                src={speaker.image}
+                alt={speaker.name}
+                className="w-14 h-14 rounded-full object-cover"
+              />
+              <div>
+                <p className="font-bold text-gray-900">{speaker.name}</p>
+                <p className="text-sm text-teal-700 font-medium">
+                  {speaker.title}
+                </p>
+                <p className="text-sm text-gray-600">{speaker.org}</p>
+              </div>
+            </div>
+          ))}
+        </div>
 
         {/* HIGHLIGHTS */}
-        {/* <ul className="text-sm text-gray-600 space-y-1 list-disc pl-5"> */}
         <ul className="text-base text-gray-700 space-y-2 list-disc pl-5">
           {event.highlights.map((item, index) => (
             <li key={index}>{item}</li>
@@ -494,12 +611,10 @@ export function UpcomingEventCard({
         </ul>
       </div>
 
-      {/* BOTTOM FIXED SECTION */}
+      {/* BOTTOM */}
       <div className="mt-auto pt-6">
 
-        {/* META ROW — CENTERED */}
         <div className="flex flex-wrap justify-center items-center gap-4 bg-teal-50 border border-teal-100 rounded-xl px-4 py-3 mb-4 text-sm">
-
           <span className="flex items-center gap-2 text-teal-700 font-semibold">
             <Video size={16} />
             {event.meta.mode}
@@ -510,33 +625,17 @@ export function UpcomingEventCard({
             {event.meta.date}
           </span>
 
-          {/* <span className="flex items-center gap-2 text-gray-600">
-            <Globe size={16} />
-            {event.meta.region ?? 'Worldwide'}
-          </span> */}
-
           <span className="px-3 py-1 rounded-full bg-orange-100 text-orange-600 font-semibold text-xs">
             {event.meta.duration}
           </span>
         </div>
 
-        {/* CTA */}
-        <div className="flex gap-3">
-          <Button
-            className="flex-1 bg-teal-700 hover:bg-teal-800 text-white rounded-xl py-5 text-sm font-semibold"
-            onClick={() => onNotify(event.title)}
-          >
-            Notify Me →
-          </Button>
-
-          {/* <Button
-            variant="outline"
-            className="rounded-xl px-5 text-sm font-semibold"
-            onClick={() => router.push(`/event-details/${event.id}`)}
-          >
-            Add to Calendar
-          </Button> */}
-        </div>
+        <Button
+          className="w-full bg-teal-700 hover:bg-teal-800 text-white rounded-xl py-5 text-sm font-semibold"
+          onClick={() => onNotify(event)}
+        >
+          Notify Me →
+        </Button>
       </div>
     </div>
   )

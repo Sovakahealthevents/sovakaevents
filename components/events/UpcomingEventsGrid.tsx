@@ -43,37 +43,37 @@
 //   )
 // }
 
-import { UpcomingEventCard } from './UpcomingEventCard'
+// import { UpcomingEventCard } from './UpcomingEventCard'
 
-const EVENTS = [
-  {
-    id: 1,
-    title: 'Understanding and Preventing Osteoporosis',
-    category: 'Bone Health',
-    tags: ['Virtual', 'FREE', 'English'],
+// const EVENTS = [
+//   {
+//     id: 1,
+//     title: 'Understanding and Preventing Osteoporosis',
+//     category: 'Bone Health',
+//     tags: ['Virtual', 'FREE', 'English'],
 
-    speakers: [
-      {
-        name: 'David Brian Karpf, MD',
-        title:
-          'Adj. Clinical Professor of Endocrinology, Gerontology & Metabolism',
-        org: 'Stanford University School of Medicine',
-        image: '/david.png',
-      },
-    ],
+//     speakers: [
+//       {
+//         name: 'David Brian Karpf, MD',
+//         title:
+//           'Adj. Clinical Professor of Endocrinology, Gerontology & Metabolism',
+//         org: 'Stanford University School of Medicine',
+//         image: '/david.png',
+//       },
+//     ],
 
-    highlights: [
-      'Attending, Osteoporosis & Metabolic Bone Disease Clinic, Stanford University Hospital',
-      'Past-Chair, MSAB, American Bone Health | Fellow, ASBMR',
-      'Scientific Advisor at Bone Health Technologies (Osteoboost).',
-    ],
+//     highlights: [
+//       'Attending, Osteoporosis & Metabolic Bone Disease Clinic, Stanford University Hospital',
+//       'Past-Chair, MSAB, American Bone Health | Fellow, ASBMR',
+//       'Scientific Advisor at Bone Health Technologies (Osteoboost).',
+//     ],
 
-    meta: {
-      mode: 'Virtual Zoom, Worldwide',
-      date: 'Date TBA',
-      duration: '1hr Session + Q&A',
-    },
-  },
+//     meta: {
+//       mode: 'Virtual Zoom, Worldwide',
+//       date: 'Date TBA',
+//       duration: '1hr Session + Q&A',
+//     },
+//   },
 
   // {
   //   id: 2,
@@ -139,13 +139,17 @@ const EVENTS = [
   //     duration: '1hr Session + Q&A',
   //   },
   // },
-]
+// ]
 
+'use client'
+
+import { EVENTS, type Event } from "./events-data"
+import { UpcomingEventCard } from "./UpcomingEventCard"
 
 export function UpcomingEventsGrid({
   onNotify,
 }: {
-  onNotify: (title: string) => void
+  onNotify: (event: Event) => void
 }) {
   return (
     <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
@@ -159,4 +163,3 @@ export function UpcomingEventsGrid({
     </div>
   )
 }
-

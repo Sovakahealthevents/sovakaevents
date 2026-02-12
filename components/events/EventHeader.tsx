@@ -72,6 +72,11 @@ export function EventHeader({ event }: { event: any }) {
             text="1hr Session + Q&A"
             className="bg-orange-100 text-orange-700 text-sm font-semibold"
           />
+          <Badge
+            // icon={<Globe className="w-5 h-5" />}
+            text=" 🇮🇳 In Hindi"
+            className="bg-gray-100 text-gray-700"
+          />
         </div>
 
         {/* Title */}
@@ -91,7 +96,7 @@ export function EventHeader({ event }: { event: any }) {
           />
           <MetaBig
             icon={<Users className="w-6 h-6" />}
-            text={`${event.speakers?.length || 0} Expert Speakers`}
+            text={`${event.speakers?.length || 0} Expert Speaker`}
           />
         </div>
       </div>
