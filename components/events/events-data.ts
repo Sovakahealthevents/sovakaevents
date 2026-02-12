@@ -49,7 +49,7 @@ export const EVENTS: Event[] = [
     id: "cancercareRaghuRam-2026",
     title: "Cancer Care Awareness:ABCs of Breast Cancer – What Every Woman Must Know!",
     category: "Cancer Awareness",
-    tags: ["Virtual", "FREE", "Telugu"],
+    tags: ["Virtual", "FREE", "Telugu","English"],
     speakers: [
       {
         name: "Dr. P. Raghu Ram OBE",
