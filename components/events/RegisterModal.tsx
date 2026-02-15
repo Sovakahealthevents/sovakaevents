@@ -284,9 +284,9 @@ and{" "}
           </button>
  
           {/* Secure text */}
-          <p className="text-[11px] sm:text-xs text-center text-slate-400">
+          {/* <p className="text-[11px] sm:text-xs text-center text-slate-400">
             Your information is secure and will never be shared.
-          </p>
+          </p> */}
         </div>
  
         {/* Medical Disclaimer */}
