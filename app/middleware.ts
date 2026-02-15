@@ -6,7 +6,7 @@ export function middleware(request: NextRequest) {
 
   // Protect all /admin routes
   if (!token && request.nextUrl.pathname.startsWith("/admin")) {
-    return NextResponse.redirect(new URL("/login", request.url))
+    return NextResponse.redirect(new URL("/secure-access", request.url))
   }
 
   return NextResponse.next()

@@ -157,7 +157,7 @@ they affect treatment and recovery.
           <span className="text-lg">🌐</span>
           <div>
             <p className="text-base font-semibold text-slate-900">
-              Also Coming in Hindi & Telugu.
+              Also Coming in English & Telugu.
             </p>
             <p className="text-sm text-slate-600 mt-1">
               Same expert speakers, same life-saving content — in your preferred
@@ -172,7 +172,7 @@ they affect treatment and recovery.
                 }}
                 className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-medium text-slate-700 border hover:bg-slate-50 no-underline hover:underline cursor-pointer"
               >
-               🇺🇸 Hindi — Notify Me
+               🇺🇸 English — Notify Me
               </button>
 
               <button
