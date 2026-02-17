@@ -337,9 +337,11 @@ END:VCALENDAR
 
       {/* Register Modal */}
       <RegisterModal
+        title="Cancer Care Awareness"
         open={open}
         onClose={() => setOpen(false)}
         eventId={eventId}
+        
       />
     </>
   )

@@ -116,7 +116,7 @@ export default function OnDemandEvent() {
             </div>
             <p>
                 Cancer burden in adults over 60 years in the Indian
-population.Frailty, multimorbidity and financial toxicity how
+& USA.Frailty, multimorbidity and financial toxicity how
 they affect treatment and recovery.
             </p>
 
@@ -167,7 +167,7 @@ they affect treatment and recovery.
             <div className="flex flex-wrap gap-3 mt-4">
               <button
                 onClick={() => {
-                  setNotifyTitle('Notify me when Hindi sessions are available')
+                  setNotifyTitle('Notify me when English session is available')
                   setNotifyOpen(true)
                 }}
                 className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-medium text-slate-700 border hover:bg-slate-50 no-underline hover:underline cursor-pointer"
@@ -177,7 +177,7 @@ they affect treatment and recovery.
 
               <button
                 onClick={() => {
-                  setNotifyTitle('Notify me when Telugu sessions are available')
+                  setNotifyTitle('Notify me when Telugu session is available')
                   setNotifyOpen(true)
                 }}
                 className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-medium text-slate-700 border hover:bg-slate-50 no-underline hover:underline cursor-pointer"
@@ -199,6 +199,7 @@ they affect treatment and recovery.
 
       {/* Register Modal */}
             <RegisterModal
+            title="Cancer Care in Elderly"
               open={open}
               onClose={() => setOpen(false)}
               eventId={eventData.id}

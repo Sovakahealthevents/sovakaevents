@@ -64,10 +64,12 @@ export function RegisterModal({
   open,
   onClose,
   eventId,
+  title
 }: {
   open: boolean
   onClose: () => void
   eventId: string
+  title: string
 }) {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
@@ -162,8 +164,9 @@ useEffect(() => {
             Register for Free
           </h2>
           <p className="text-xs sm:text-sm text-slate-500">
-             Cancer Care in Elderly & Breast Cancer In Women
+            {title}
           </p>
+          
         </div>
  
         {/* Form */}

@@ -1040,6 +1040,7 @@ export default function FeaturedEvent() {
 
       {/* Register Modal */}
             <RegisterModal
+            title="Cancer Care Awareness"
               open={open}
               onClose={() => setOpen(false)}
               eventId={eventData.id}

@@ -85,7 +85,7 @@ export const EVENTS: Event[] = [
       },
     ],
     highlights: [
-      "Cancer burden in adults over 60 years in the Indian population.Frailty, multimorbidity and financial toxicity how they affect treatment and recovery.",
+      "Cancer burden in adults over 60 years in the Indian & USA.Frailty, multimorbidity and financial toxicity how they affect treatment and recovery.",
     //   "Past-Chair, MSAB, American Bone Health | Fellow, ASBMR",
     //   "Scientific Advisor at Bone Health Technologies (Osteoboost).",
     ],
