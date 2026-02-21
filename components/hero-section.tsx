@@ -292,10 +292,10 @@ export default function HeroSection() {
             {/* Stats */}
             <div className="flex flex-wrap gap-8 mt-6">
               {[
-                { value: '3+', label: 'Expert Speakers' },
-                { value: '30+', label: 'Global Attendees' },
-                { value: '3+', label: 'Health Topics' },
-                { value: '3+', label: 'Languages' },
+                { value: '4+', label: 'Expert Speakers' },
+                { value: '100+', label: 'Global Attendees' },
+                { value: '4+', label: 'Health Topics' },
+                { value: '4+', label: 'Languages' },
               ].map((stat) => (
                 <div key={stat.label}>
                   <p className="text-2xl sm:text-3xl font-bold text-gray-900">
