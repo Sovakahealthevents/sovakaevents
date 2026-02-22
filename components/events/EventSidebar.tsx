@@ -154,6 +154,7 @@ import {
 } from 'lucide-react'
 import { Event } from '@/lib/events'
 import { RegisterModal } from './RegisterModal'
+import Link from 'next/link'
 
 type Props = {
   event: Event
@@ -267,12 +268,19 @@ END:VCALENDAR
           </div>
 
           {/* CTA */}
-          <button
+          {/* <button
             onClick={() => setOpen(true)}
             className="w-full py-3 rounded-full bg-teal-600 text-white font-semibold hover:bg-teal-700 transition"
           >
             Register Now – It’s Free
-          </button>
+          </button> */}
+           <Link
+           
+              href={`https://zoom.us/webinar/register/WN_cxBRCEqcQNmAyhSt-Ss3FA`}
+              className="block w-full py-3 rounded-full bg-teal-600 text-white text-center font-semibold hover:bg-teal-700 transition"
+            >
+              Register Now →
+            </Link> 
 
           {/* Calendar */}
           {/* <button

@@ -965,12 +965,18 @@ export default function FeaturedEvent() {
 
           {/* Actions */}
           <div className="flex flex-wrap gap-4">
-            <button
+            {/* <button
             onClick={() => setOpen(true)}
             className="rounded-full bg-teal-600 px-10 py-4 text-lg text-white font-semibold hover:bg-teal-700 transition cursor-pointer"
           >
             Register Now – It’s Free
-          </button>
+          </button> */}
+                      <Link
+              href={`https://zoom.us/webinar/register/WN_cxBRCEqcQNmAyhSt-Ss3FA`}
+              className="rounded-full bg-teal-600 px-10 py-4 text-lg text-white font-semibold hover:bg-teal-700 transition"
+            >
+              Register Now →
+            </Link> 
              
             
             <Link
