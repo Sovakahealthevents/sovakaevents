@@ -206,6 +206,38 @@ export default function PastEventDetail() {
           </div>
         </div>
       </div>
+
+      {/* SPONSOR THANK YOU */}
+<div className="mt-16">
+  <div className="max-w-3xl mx-auto bg-gray-50 rounded-2xl border px-6 py-8 text-center">
+    <h3 className="text-xl font-semibold text-gray-900 mb-2">
+      Special Thanks to Our Sponsor
+    </h3>
+
+    <p className="text-sm text-gray-600 mb-6">
+      Generous sponsorship helps make our healthcare innovation events possible.
+    </p>
+
+    <div className="bg-white rounded-xl border px-6 py-4 flex flex-col items-center gap-2">
+      <div className="flex items-center gap-2 font-semibold text-gray-900">
+        <span>🍽️</span>
+        <span>Avachi Biryani House</span>
+      </div>
+
+      <p className="text-sm text-gray-500">
+        Cupertino, California, USA
+      </p>
+
+      <p className="text-sm italic text-gray-500 mt-1">
+        “Experience the real flavors” – Supporting healthcare innovation in our community
+      </p>
+    </div>
+
+    <p className="mt-6 text-sm font-medium text-orange-600">
+      Thank you for believing in our mission to transform global healthcare! 🙏
+    </p>
+  </div>
+</div>
     </section>
   )
 }
