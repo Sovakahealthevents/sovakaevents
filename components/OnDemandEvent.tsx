@@ -19,6 +19,13 @@ export default function OnDemandEvent() {
   const [notifyOpen, setNotifyOpen] = useState(false)
   const [notifyTitle, setNotifyTitle] = useState('')
 
+  const handleWhatsAppShare = () => {
+  const url = `${window.location.origin}/event-details/${eventData.slug}`
+  const text = `Watch: ${eventData.title}\n\nRegister free here:\n${url}`
+  const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(text)}`
+  window.open(whatsappUrl, '_blank')
+}
+
   return (
     <section className="px-6 lg:px-16 py-16 bg-white text-lg leading-relaxed">
       {/* Header */}
@@ -137,6 +144,13 @@ they affect treatment and recovery.
     className="w-full rounded-full bg-teal-600 px-10 py-4 text-lg text-white font-semibold hover:bg-teal-700 transition cursor-pointer"
   >
     Register Now – It’s Free
+  </button>
+
+  <button
+    onClick={handleWhatsAppShare}
+    className="w-full rounded-full bg-green-600 px-10 py-4 text-lg text-white font-semibold hover:bg-green-700 transition cursor-pointer"
+  >
+    Share on WhatsApp
   </button>
 </div>
 

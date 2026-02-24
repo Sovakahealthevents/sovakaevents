@@ -27,6 +27,14 @@ export type Event = {
   free?: boolean
   aboutEvent?: string
   speakers: Speaker[]
+
+  /* NEW OPTIONAL FIELDS */
+  registrationLink?: string
+  sponsors?: {
+    name: string
+    bgColor: string
+    textColor: string
+  }[]
 }
 
 
@@ -82,6 +90,59 @@ export const events: Event[] = [
           'Essential knowledge about breast cancer awareness, early detection, and modern treatment approaches.',
         website: 'https://breastcancerindia.org',
         image: '/raghu.png',
+      },
+    ],
+    registrationLink:
+  'https://zoom.us/webinar/register/WN_cxBRCEqcQNmAyhSt-Ss3FA',
+
+sponsors: [
+  {
+    name: 'KIMS-USHALAKSHMI Centre for Breast Diseases, Hyderabad, India',
+    bgColor: 'bg-orange-50',
+    textColor: 'text-orange-700',
+  },
+  {
+    name: 'Ushalakshmi Breast Cancer Foundation, Hyderabad, India',
+    bgColor: 'bg-teal-50',
+    textColor: 'text-teal-700',
+  },
+],
+  },
+
+  {
+    id: "a724e568-3280-467e-b73c-0c04070eb70f",
+    slug: 'cancer-care-in-elderly',
+    type: 'Virtual Zoom, Worldwide',
+    title: 'Cancer Care in Elderly - What you need to know!',
+    date: '02-2026',
+    dayName: 'Monday',
+    month: 'March',
+    time: '10:00 AM IST',
+    location: 'Virtual Zoom',
+    locationType: 'Worldwide',
+    featured: true,
+    free: true,
+
+    aboutEvent:
+      "Join two distinguished surgeons for a comprehensive cancer awareness camp. Dr. Somasundar will address the growing cancer burden in India's ageing population, while Dr. Raghu Ram will focus on breast cancer awareness and early detection.",
+
+    speakers: [
+     
+
+      {
+        id: 2,
+        role: 'FEATURED SPEAKER',
+        name: 'Dr. Ponnandai Somasundar',
+        title:
+          'MD – Surgical Oncologist | Roger Williams Medical Center | USA, 36+ years of experience in geriatric oncology',
+        bio:
+          '',
+        topic:
+          'Cancer Care in Elderly',
+        topicDescription:
+          'Cancer burden in adults over 60 years in the Indian & USA.Frailty, multimorbidity and financial toxicity how they affect treatment and recovery.',
+        // website: 'https://breastcancerindia.org',
+        image: '/somasundar.png',
       },
     ],
   },

@@ -267,29 +267,25 @@ END:VCALENDAR
             </div>
           </div>
 
-          {/* CTA */}
-          {/* <button
-            onClick={() => setOpen(true)}
-            className="w-full py-3 rounded-full bg-teal-600 text-white font-semibold hover:bg-teal-700 transition"
-          >
-            Register Now – It’s Free
-          </button> */}
-           <Link
-           
-              href={`https://zoom.us/webinar/register/WN_cxBRCEqcQNmAyhSt-Ss3FA`}
-              className="block w-full py-3 rounded-full bg-teal-600 text-white text-center font-semibold hover:bg-teal-700 transition"
-            >
-              Register Now →
-            </Link> 
+         
+            {event.registrationLink ? (
+  <Link
+    href={event.registrationLink}
+    target="_blank"
+    className="block w-full py-3 rounded-full bg-teal-600 text-white text-center font-semibold hover:bg-teal-700 transition"
+  >
+    Register Now →
+  </Link>
+) : (
+  <button
+    onClick={() => setOpen(true)}
+    className="w-full py-3 rounded-full bg-teal-600 text-white font-semibold hover:bg-teal-700 transition"
+  >
+    Register Now – It’s Free
+  </button>
+)}
 
-          {/* Calendar */}
-          {/* <button
-            onClick={downloadICS}
-            className="w-full flex items-center justify-center gap-2 py-3 rounded-full border text-sm font-medium hover:bg-gray-50"
-          >
-            <CalendarPlus className="h-4 w-4" />
-            Add to Calendar
-          </button> */}
+         
 
           {/* Share */}
           <div className="space-y-4 pt-4 border-t">
@@ -326,31 +322,32 @@ END:VCALENDAR
           </div>
 
           {/* Sponsors / Ads */}
-          <div className="pt-6 border-t space-y-3">
-            <p className="text-xs text-gray-500 text-center">
-              Proudly supported by
-            </p>
+          {event.sponsors && event.sponsors.length > 0 && (
+  <div className="pt-6 border-t space-y-3">
+    <p className="text-xs text-gray-500 text-center">
+      Proudly supported by
+    </p>
 
-            <div className="rounded-xl bg-orange-50 px-4 py-3 text-center text-sm font-semibold text-orange-700">
-              KIMS-USHALAKSHMI Centre for Breast Diseases, Hyderabad, India
-            </div>
-
-            <div className="rounded-xl bg-teal-50 px-4 py-3 text-center text-sm font-semibold text-teal-700">
-              
-              Ushalakshmi Breast Cancer Foundation, Hyderabad, India 
-            </div>
-          </div>
+    {event.sponsors.map((sponsor, index) => (
+      <div
+        key={index}
+        className={`rounded-xl px-4 py-3 text-center text-sm font-semibold ${sponsor.bgColor} ${sponsor.textColor}`}
+      >
+        {sponsor.name}
+      </div>
+    ))}
+  </div>
+)}
         </div>
       </aside>
 
       {/* Register Modal */}
       <RegisterModal
-        title="Cancer Care Awareness"
-        open={open}
-        onClose={() => setOpen(false)}
-        eventId={eventId}
-        
-      />
+  title={event.title}
+  open={open}
+  onClose={() => setOpen(false)}
+  eventId={eventId}
+/>
     </>
   )
 }
