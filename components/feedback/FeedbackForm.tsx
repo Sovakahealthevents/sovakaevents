@@ -111,13 +111,16 @@
 //     </form>
 //   )
 // }
-
 'use client'
 
 import { Smile, Meh, Frown } from 'lucide-react'
 import { useState } from 'react'
 
-export default function FeedbackForm() {
+type FeedbackFormProps = {
+  onSuccess?: () => void
+}
+
+export default function FeedbackForm({ onSuccess }: FeedbackFormProps) {
   const [rating, setRating] = useState<number | null>(null)
   const [message, setMessage] = useState('')
   const [email, setEmail] = useState('')
@@ -165,6 +168,9 @@ export default function FeedbackForm() {
       setCountry('')
       setPreferredLanguage('')
       setNextTopic('')
+
+      // Close modal if provided
+      onSuccess?.()
     } catch (err: any) {
       setError(err.message)
     } finally {
@@ -245,7 +251,7 @@ export default function FeedbackForm() {
         className="w-full rounded-xl border px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
       />
 
-      {/* What to Listen Next */}
+      {/* Next Topic */}
       <textarea
         rows={3}
         placeholder="What would you like us to cover next?"
