@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { FeedbackModal } from './FeedbackModal'
+import FeedbackModal from './FeedbackModal'
 
 export function FeedbackTrigger() {
   const [open, setOpen] = useState(false)
@@ -10,7 +10,7 @@ export function FeedbackTrigger() {
     <>
       <button
         onClick={() => setOpen(true)}
-        className="rounded-full border px-5 py-2 text-sm font-medium hover:bg-gray-50"
+        className="rounded-lg bg-blue-600 px-4 py-2 text-white hover:bg-blue-700 transition"
       >
         Give Feedback
       </button>

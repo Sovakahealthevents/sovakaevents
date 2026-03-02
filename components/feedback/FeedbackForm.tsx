@@ -111,33 +111,38 @@
 //     </form>
 //   )
 // }
+
 'use client'
 
 import { Smile, Meh, Frown } from 'lucide-react'
 import { useState } from 'react'
 
 type FeedbackFormProps = {
-  onSuccess?: () => void
+  onSubmit?: () => void
 }
 
-export default function FeedbackForm({ onSuccess }: FeedbackFormProps) {
+export default function FeedbackForm({ onSubmit }: FeedbackFormProps) {
   const [rating, setRating] = useState<number | null>(null)
   const [message, setMessage] = useState('')
-  const [email, setEmail] = useState('')
-  const [country, setCountry] = useState('')
-  const [preferredLanguage, setPreferredLanguage] = useState('')
   const [nextTopic, setNextTopic] = useState('')
-
+  const [country, setCountry] = useState('')
+  const [language, setLanguage] = useState('')
   const [loading, setLoading] = useState(false)
-  const [success, setSuccess] = useState<string | null>(null)
   const [error, setError] = useState<string | null>(null)
+  const [success, setSuccess] = useState<string | null>(null)
+  const [email, setEmail] = useState('')
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
 
+    if (!message || message.trim().length < 3) {
+      setError('Please enter a valid message.')
+      return
+    }
+
     setLoading(true)
-    setSuccess(null)
     setError(null)
+    setSuccess(null)
 
     try {
       const res = await fetch('/api/feedback', {
@@ -146,40 +151,41 @@ export default function FeedbackForm({ onSuccess }: FeedbackFormProps) {
         body: JSON.stringify({
           rating,
           message,
-          email: email || null,
+          email: email || null, // if you collect email, pass it here
           country,
-          preferred_language: preferredLanguage || null,
-          next_topic: nextTopic || null,
+          preferred_language: language, // ✅ snake_case
+          next_topic: nextTopic,        // ✅ snake_case
         }),
       })
 
-      const json = await res.json()
+      const data = await res.json()
 
       if (!res.ok) {
-        throw new Error(json.error || 'Submission failed')
+        setError(data.error || 'Something went wrong.')
+      } else {
+        setSuccess(data.message || 'Feedback submitted ❤️')
+
+        // Reset form
+        setRating(null)
+        setMessage('')
+        setNextTopic('')
+        setCountry('')
+        setLanguage('')
+
+        // OPTIONAL: close modal after 1.5 seconds
+        setTimeout(() => {
+          onSubmit?.()
+        }, 1500)
       }
-
-      setSuccess(json.message)
-
-      // Reset form
-      setRating(null)
-      setMessage('')
-      setEmail('')
-      setCountry('')
-      setPreferredLanguage('')
-      setNextTopic('')
-
-      // Close modal if provided
-      onSuccess?.()
-    } catch (err: any) {
-      setError(err.message)
+    } catch (err) {
+      setError('Network error. Please try again.')
     } finally {
       setLoading(false)
     }
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-5">
+    <form onSubmit={handleSubmit} className="space-y-4">
 
       {/* Rating */}
       <div className="flex justify-center gap-6">
@@ -224,14 +230,21 @@ export default function FeedbackForm({ onSuccess }: FeedbackFormProps) {
         className="w-full rounded-xl border px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
       />
 
-      {/* Email */}
+      {/* What Next */}
       <input
-        type="email"
-        placeholder="Your email (optional)"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
+        type="text"
+        placeholder="What would you like us to cover next?"
+        value={nextTopic}
+        onChange={(e) => setNextTopic(e.target.value)}
         className="w-full rounded-xl border px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
       />
+      <input
+  type="email"
+  placeholder="Your Email (optional)"
+  value={email}
+  onChange={(e) => setEmail(e.target.value)}
+  className="w-full rounded-xl border px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+/>
 
       {/* Country */}
       <input
@@ -242,23 +255,26 @@ export default function FeedbackForm({ onSuccess }: FeedbackFormProps) {
         className="w-full rounded-xl border px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
       />
 
-      {/* Preferred Language */}
+      {/* Language */}
       <input
         type="text"
         placeholder="Preferred Language"
-        value={preferredLanguage}
-        onChange={(e) => setPreferredLanguage(e.target.value)}
+        value={language}
+        onChange={(e) => setLanguage(e.target.value)}
         className="w-full rounded-xl border px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
       />
 
-      {/* Next Topic */}
-      <textarea
-        rows={3}
-        placeholder="What would you like us to cover next?"
-        value={nextTopic}
-        onChange={(e) => setNextTopic(e.target.value)}
-        className="w-full rounded-xl border px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
-      />
+      {/* Error */}
+      {error && (
+        <p className="text-sm text-red-500 text-center">{error}</p>
+      )}
+
+      {/* Success */}
+      {success && (
+        <p className="text-sm text-green-600 text-center font-medium">
+          {success}
+        </p>
+      )}
 
       {/* Submit */}
       <button
@@ -268,18 +284,6 @@ export default function FeedbackForm({ onSuccess }: FeedbackFormProps) {
       >
         {loading ? 'Submitting...' : 'Submit Feedback'}
       </button>
-
-      {success && (
-        <p className="text-sm text-green-600 text-center">
-          {success}
-        </p>
-      )}
-
-      {error && (
-        <p className="text-sm text-red-600 text-center">
-          {error}
-        </p>
-      )}
 
       <p className="text-xs text-gray-400 text-center">
         We read every response ❤️

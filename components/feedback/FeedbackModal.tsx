@@ -83,7 +83,6 @@
 //   )
 // }
 
-
 'use client'
 
 import FeedbackForm from './FeedbackForm'
@@ -100,26 +99,26 @@ export default function FeedbackModal({
   if (!open) return null
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm">
-      <div className="w-full max-w-lg rounded-2xl bg-white p-6 shadow-xl relative">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
+      <div className="relative w-full max-w-md rounded-xl bg-white p-6 shadow-xl">
 
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-gray-400 hover:text-gray-600"
+          className="absolute right-4 top-4 text-gray-500 hover:text-black"
         >
           ✕
         </button>
 
-        <h2 className="text-lg font-semibold mb-4 text-center">
-          Share Your Feedback
+        <h2 className="mb-4 text-xl font-semibold">
+          Event Feedback
         </h2>
 
-        <FeedbackForm
-          onSuccess={() => {
-            onClose()
-          }}
-        />
+       <FeedbackForm
+  onSubmit={() => {
+    onClose()
+  }}
+/>
       </div>
     </div>
   )
