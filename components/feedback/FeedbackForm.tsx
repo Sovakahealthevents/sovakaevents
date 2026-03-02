@@ -1,43 +1,180 @@
+// 'use client'
+
+// import { Smile, Meh, Frown } from 'lucide-react'
+// import { useState } from 'react'
+
+// type FeedbackFormProps = {
+//   onSubmit?: (data: {
+//     rating: number | null
+//     message: string
+//     email?: string
+//   }) => void
+// }
+
+// export default function FeedbackForm({ onSubmit }: FeedbackFormProps) {
+//   const [rating, setRating] = useState<number | null>(null)
+//   const [message, setMessage] = useState('')
+//   const [email, setEmail] = useState('')
+
+//   const handleSubmit = (e: React.FormEvent) => {
+//     e.preventDefault()
+
+//     const data = {
+//       rating,
+//       message,
+//       email: email || undefined,
+//     }
+
+//     // MVP: console log
+//     console.log('Feedback submitted:', data)
+
+//     onSubmit?.(data)
+
+//     // Reset (optional)
+//     setRating(null)
+//     setMessage('')
+//     setEmail('')
+//   }
+
+//   return (
+//     <form onSubmit={handleSubmit} className="space-y-4">
+//       {/* Rating */}
+//       <div className="flex justify-center gap-6">
+//         <button
+//           type="button"
+//           onClick={() => setRating(1)}
+//           className={`p-3 rounded-full border transition ${
+//             rating === 1 ? 'bg-red-50 border-red-400' : 'hover:bg-gray-50'
+//           }`}
+//         >
+//           <Frown />
+//         </button>
+
+//         <button
+//           type="button"
+//           onClick={() => setRating(2)}
+//           className={`p-3 rounded-full border transition ${
+//             rating === 2 ? 'bg-yellow-50 border-yellow-400' : 'hover:bg-gray-50'
+//           }`}
+//         >
+//           <Meh />
+//         </button>
+
+//         <button
+//           type="button"
+//           onClick={() => setRating(3)}
+//           className={`p-3 rounded-full border transition ${
+//             rating === 3 ? 'bg-green-50 border-green-400' : 'hover:bg-gray-50'
+//           }`}
+//         >
+//           <Smile />
+//         </button>
+//       </div>
+
+//       {/* Message */}
+//       <textarea
+//         required
+//         rows={4}
+//         placeholder="What can we improve?"
+//         value={message}
+//         onChange={(e) => setMessage(e.target.value)}
+//         className="w-full rounded-xl border px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+//       />
+
+//       {/* Email (optional) */}
+//       <input
+//         type="countru"
+//         placeholder="Country of Residence"
+//         value={email}
+        
+//         className="w-full rounded-xl border px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+//       />
+//       <input
+//         type="language"
+//         placeholder="prefered Language"
+//         value={email}
+        
+//         className="w-full rounded-xl border px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+//       />
+
+//       {/* Submit */}
+//       <button
+//         type="submit"
+//         className="w-full rounded-full bg-teal-600 py-3 text-white font-medium hover:bg-teal-700 transition"
+//       >
+//         Submit Feedback
+//       </button>
+
+//       <p className="text-xs text-gray-400 text-center">
+//         We read every response ❤️
+//       </p>
+//     </form>
+//   )
+// }
+
 'use client'
 
 import { Smile, Meh, Frown } from 'lucide-react'
 import { useState } from 'react'
 
-type FeedbackFormProps = {
-  onSubmit?: (data: {
-    rating: number | null
-    message: string
-    email?: string
-  }) => void
-}
-
-export default function FeedbackForm({ onSubmit }: FeedbackFormProps) {
+export default function FeedbackForm() {
   const [rating, setRating] = useState<number | null>(null)
   const [message, setMessage] = useState('')
   const [email, setEmail] = useState('')
+  const [country, setCountry] = useState('')
+  const [preferredLanguage, setPreferredLanguage] = useState('')
+  const [nextTopic, setNextTopic] = useState('')
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [loading, setLoading] = useState(false)
+  const [success, setSuccess] = useState<string | null>(null)
+  const [error, setError] = useState<string | null>(null)
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
 
-    const data = {
-      rating,
-      message,
-      email: email || undefined,
+    setLoading(true)
+    setSuccess(null)
+    setError(null)
+
+    try {
+      const res = await fetch('/api/feedback', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          rating,
+          message,
+          email: email || null,
+          country,
+          preferred_language: preferredLanguage || null,
+          next_topic: nextTopic || null,
+        }),
+      })
+
+      const json = await res.json()
+
+      if (!res.ok) {
+        throw new Error(json.error || 'Submission failed')
+      }
+
+      setSuccess(json.message)
+
+      // Reset form
+      setRating(null)
+      setMessage('')
+      setEmail('')
+      setCountry('')
+      setPreferredLanguage('')
+      setNextTopic('')
+    } catch (err: any) {
+      setError(err.message)
+    } finally {
+      setLoading(false)
     }
-
-    // MVP: console log
-    console.log('Feedback submitted:', data)
-
-    onSubmit?.(data)
-
-    // Reset (optional)
-    setRating(null)
-    setMessage('')
-    setEmail('')
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
+    <form onSubmit={handleSubmit} className="space-y-5">
+
       {/* Rating */}
       <div className="flex justify-center gap-6">
         <button
@@ -81,29 +218,62 @@ export default function FeedbackForm({ onSubmit }: FeedbackFormProps) {
         className="w-full rounded-xl border px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
       />
 
-      {/* Email (optional) */}
+      {/* Email */}
       <input
-        type="countru"
-        placeholder="Country of Residence"
+        type="email"
+        placeholder="Your email (optional)"
         value={email}
-        
+        onChange={(e) => setEmail(e.target.value)}
         className="w-full rounded-xl border px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
       />
+
+      {/* Country */}
       <input
-        type="language"
-        placeholder="prefered Language"
-        value={email}
-        
+        type="text"
+        placeholder="Country of Residence"
+        value={country}
+        onChange={(e) => setCountry(e.target.value)}
+        className="w-full rounded-xl border px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+      />
+
+      {/* Preferred Language */}
+      <input
+        type="text"
+        placeholder="Preferred Language"
+        value={preferredLanguage}
+        onChange={(e) => setPreferredLanguage(e.target.value)}
+        className="w-full rounded-xl border px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+      />
+
+      {/* What to Listen Next */}
+      <textarea
+        rows={3}
+        placeholder="What would you like us to cover next?"
+        value={nextTopic}
+        onChange={(e) => setNextTopic(e.target.value)}
         className="w-full rounded-xl border px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
       />
 
       {/* Submit */}
       <button
         type="submit"
-        className="w-full rounded-full bg-teal-600 py-3 text-white font-medium hover:bg-teal-700 transition"
+        disabled={loading}
+        className="w-full rounded-full bg-teal-600 py-3 text-white font-medium hover:bg-teal-700 transition disabled:opacity-50"
       >
-        Submit Feedback
+        {loading ? 'Submitting...' : 'Submit Feedback'}
       </button>
+
+      {success && (
+        <p className="text-sm text-green-600 text-center">
+          {success}
+        </p>
+      )}
+
+      {error && (
+        <p className="text-sm text-red-600 text-center">
+          {error}
+        </p>
+      )}
 
       <p className="text-xs text-gray-400 text-center">
         We read every response ❤️
